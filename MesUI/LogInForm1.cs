@@ -22,12 +22,14 @@ namespace MesUI
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(usrIdText.Text + "님, 안녕하세요!");
-
             if (Dao.Employee.VerifyIdPassword(usrIdText.Text, passwdText.Text))
-                loginstate = true;// MessageBox.Show(usrIdText.Text + "인증 성공");
-            //LogInForm2 form1 = (LogInForm2)((Form1)(this.MdiParent)).dictForm["loginForm2"];
-            ((Form1)(this.MdiParent)).ShowForm("loginForm2"); 
+            {
+                MessageBox.Show(usrIdText.Text + "님, 안녕하세요!");
+                loginstate = true;
+                ((Form1)(this.MdiParent)).ShowForm("loginForm2");
+            }
+            else
+                MessageBox.Show("ID 또는 암호가 틀렸습니다!");
         }
 
         private void tealLogo_Click(object sender, EventArgs e)
