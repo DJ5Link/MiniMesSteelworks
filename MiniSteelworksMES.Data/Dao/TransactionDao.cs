@@ -25,5 +25,32 @@ namespace MiniSteelworksMES.Data
                 return query.ToList();
             }
         }
+
+        public void UpdateTransaction(List<string> list)
+        {
+            int id = Convert.ToInt32(list[0]);
+            DateTime datetime = Convert.ToDateTime(list[2]);
+            int type = (list[5] == "출고") ? 0 : 1;
+
+            using (var context = new MesEntities())
+            {
+                var result = context.Transactions.SingleOrDefault(x => x.ResourceId == id
+                   && x.Date == datetime
+                   && x.Type == type);
+
+                if (result != null)
+                {
+                    result.ResourceId = Convert.ToInt32(list[0]);
+                    result.SellerName = list[1];
+                    result.Date = Convert.ToDateTime(list[2]);
+                    result.Origin = list[3];
+                    result.EmployeeId = Convert.ToInt32(list[4]);
+                    result.Type = (list[5] == "출고") ? 0 : 1;
+                    result.WareHouseId = Convert.ToInt32(list[6]);
+                }
+
+                context.SaveChanges();
+            }
+        }
     }
 }
