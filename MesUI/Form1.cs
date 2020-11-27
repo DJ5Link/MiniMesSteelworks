@@ -93,6 +93,7 @@ namespace MesUI
                 }
                 ResourceQuoteForm form = (ResourceQuoteForm)dictForm["resourceQuoteForm"];
                 form.Show();
+                form.DisplayQuote();
             }
             else
             {
