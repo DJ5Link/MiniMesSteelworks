@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MiniSteelworksMES.Data;
+using MiniSteelworksMES.Data.Dao;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,20 +18,33 @@ namespace MesUI
         {
             InitializeComponent();
         }
-
         private void MaterialOrderManagement_Load(object sender, EventArgs e)
         {
-
+            DisplayAllItem();
         }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void SearchButton_Click(object sender, EventArgs e)
         {
+            if (searchConditionComboBox.SelectedIndex == 1)
+            {
+                List<Order> list = Dao.Order.GetByPK(searchConditionTextBox.Text);
+                orderBindingSource.DataSource = list;
 
+            }
+            else if (searchConditionComboBox.SelectedIndex == 2)
+            {
+                List<Order> list = Dao.Order.GetBySellerName(searchConditionTextBox.Text);
+                orderBindingSource.DataSource = list;
+            }
+            else
+                DisplayAllItem();
         }
 
-        private void 조회_Click(object sender, EventArgs e)
+        public void DisplayAllItem()
         {
-
+            List<Order> list = Dao.Order.GetAll();
+            orderBindingSource.DataSource = list;
         }
+
+       
     }
 }
