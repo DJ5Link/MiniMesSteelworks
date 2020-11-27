@@ -58,8 +58,7 @@ namespace MesUI
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            List<Resource_Quote> list = Dao.Resource_Quote.GetAll();
-            resourceQuoteBindingSource.DataSource = list;
+            DisplayQuote();
             //string rscKey = "1";
             //Dao.ResourceQuote.GetQuote(rscKey, d1, d2);
         }
@@ -71,6 +70,12 @@ namespace MesUI
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        public void DisplayQuote()
+        {
+            List<Resource_Quote> list = Dao.Resource_Quote.GetAll();
+            resourceQuoteBindingSource.DataSource = list;
         }
     }
 }
