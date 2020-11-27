@@ -188,6 +188,7 @@
     <None Include="Properties\DataSources\MiniSteelworksMES.Data.Dao.OrderDao.datasource" />
     <None Include="Properties\DataSources\MiniSteelworksMES.Data.Order.datasource" />
     <None Include="Properties\DataSources\MiniSteelworksMES.Data.Transaction.datasource" />
+    <None Include="Properties\DataSources\ResourceQuoteForm.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

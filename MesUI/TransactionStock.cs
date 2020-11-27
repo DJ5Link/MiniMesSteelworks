@@ -16,8 +16,6 @@ namespace MesUI
     {
         TransactionModify modForm = null;
 
-        //private object dbcontext;
-
         public TransactionStock()
         {
             InitializeComponent();
@@ -53,7 +51,7 @@ namespace MesUI
         {
             //rscTransactionGrid.ColumnCount = 7;
 
-            //rscTransactionGrid.Columns[0].Width = 160;
+            rscTransactionGrid.Columns[2].Width = 160;
 
             //rscTransactionGrid.Columns[0].Name = "시각";
             //rscTransactionGrid.Columns[1].Name = "창고";

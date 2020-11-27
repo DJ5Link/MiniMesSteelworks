@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MiniSteelworksMES.Data.Entities
 {
-    class ResourceQuote
+    partial class Resource_Quote
     {
     }
 }
