@@ -16,8 +16,6 @@ namespace MesUI
     {
         TransactionModify modForm = null;
 
-        //private object dbcontext;
-
         public TransactionStock()
         {
             InitializeComponent();
