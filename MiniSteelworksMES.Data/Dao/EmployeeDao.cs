@@ -32,5 +32,21 @@ namespace MiniSteelworksMES.Data.Dao
                 return false;
             }
         }
+
+        public string GetName(string id)
+        {
+            using (var context = new MesEntities())
+            {
+                var query = from x in context.Employees
+                            where x.EmployeeId.ToString() == id
+                            select x;
+
+                List<Employee> list = query.ToList();
+                if (list.Count() == 1)
+                    return list[0].Name;
+
+                return "";
+            }
+        }
     }
 }
