@@ -8,12 +8,5 @@ namespace MiniSteelworksMES.Data.Entities
 {
     partial class Resource_Quote
     {
-        //public string TypeText
-        //{
-        //    get
-        //    {
-        //        return Type == 1 ? "입고" : "출고";
-        //    }
-        //}
     }
 }

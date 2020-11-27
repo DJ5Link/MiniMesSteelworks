@@ -15,7 +15,6 @@ namespace MesUI
     public partial class ResourceQuoteForm : Form
     {
         //public DateTime d1, d2;
-        //MesEntities rq;
         public ResourceQuoteForm()
         {
             InitializeComponent();
@@ -24,6 +23,7 @@ namespace MesUI
             checkBox3.CheckedChanged += checkBox_CheckedChanged;
             checkBox4.CheckedChanged += checkBox_CheckedChanged;
             SetGridLayout();
+
         }
 
         private void checkBox_CheckedChanged(object sender, EventArgs e)
@@ -54,25 +54,30 @@ namespace MesUI
             DisplayQuote();
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            //string rscKey = "1";
-            //Dao.ResourceQuote.GetQuote(rscKey, d1, d2);
-        }
         private void SetGridLayout()
         {
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
 
         public void DisplayQuote()
         {
             List<Resource_Quote> list = Dao.Resource_Quote.GetAll();
             resourceQuoteBindingSource.DataSource = list;
+        }
+
+        private void uiDt_StartTime_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void uiDt_EndTime_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

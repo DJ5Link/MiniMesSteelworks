@@ -37,8 +37,8 @@ namespace MesUI
             System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.button1 = new System.Windows.Forms.Button();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.uiDt_EndTime = new System.Windows.Forms.DateTimePicker();
+            this.uiDt_StartTime = new System.Windows.Forms.DateTimePicker();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nikelQuoteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -73,25 +73,29 @@ namespace MesUI
             this.button1.TabIndex = 15;
             this.button1.Text = "조회";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // dateTimePicker2
+            // uiDt_EndTime
             // 
-            this.dateTimePicker2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.uiDt_EndTime.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTimePicker2.Location = new System.Drawing.Point(536, 65);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(116, 21);
-            this.dateTimePicker2.TabIndex = 14;
+            this.uiDt_EndTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.uiDt_EndTime.Location = new System.Drawing.Point(536, 65);
+            this.uiDt_EndTime.Name = "uiDt_EndTime";
+            this.uiDt_EndTime.Size = new System.Drawing.Size(116, 21);
+            this.uiDt_EndTime.TabIndex = 14;
+            this.uiDt_EndTime.ValueChanged += new System.EventHandler(this.uiDt_EndTime_ValueChanged);
             // 
-            // dateTimePicker1
+            // uiDt_StartTime
             // 
-            this.dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.uiDt_StartTime.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(536, 38);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(116, 21);
-            this.dateTimePicker1.TabIndex = 13;
+            this.uiDt_StartTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.uiDt_StartTime.Location = new System.Drawing.Point(536, 38);
+            this.uiDt_StartTime.Name = "uiDt_StartTime";
+            this.uiDt_StartTime.Size = new System.Drawing.Size(116, 21);
+            this.uiDt_StartTime.TabIndex = 13;
+            this.uiDt_StartTime.ValueChanged += new System.EventHandler(this.uiDt_StartTime_ValueChanged);
             // 
             // dataGridView1
             // 
@@ -213,9 +217,20 @@ namespace MesUI
             this.chart1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            chartArea1.AxisX.Interval = 5D;
+            chartArea1.AxisX.IntervalOffsetType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Days;
+            chartArea1.AxisX.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Days;
             chartArea1.AxisY.Interval = 1000D;
+            chartArea1.AxisY.TextOrientation = System.Windows.Forms.DataVisualization.Charting.TextOrientation.Rotated270;
+            chartArea1.AxisY.Title = "($/Ton)";
+            chartArea1.AxisY.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             chartArea1.BorderWidth = 4;
             chartArea1.Name = "ChartArea1";
+            chartArea1.Position.Auto = false;
+            chartArea1.Position.Height = 94F;
+            chartArea1.Position.Width = 75.79263F;
+            chartArea1.Position.X = 3F;
+            chartArea1.Position.Y = 3F;
             this.chart1.ChartAreas.Add(chartArea1);
             this.chart1.Cursor = System.Windows.Forms.Cursors.Cross;
             this.chart1.DataSource = this.resourceQuoteBindingSource;
@@ -286,8 +301,8 @@ namespace MesUI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1081, 530);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.uiDt_EndTime);
+            this.Controls.Add(this.uiDt_StartTime);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.checkBox4);
             this.Controls.Add(this.checkBox3);
@@ -311,8 +326,8 @@ namespace MesUI
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker uiDt_EndTime;
+        private System.Windows.Forms.DateTimePicker uiDt_StartTime;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.CheckBox checkBox4;
         private System.Windows.Forms.CheckBox checkBox3;
