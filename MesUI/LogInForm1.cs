@@ -18,18 +18,21 @@ namespace MesUI
         {
             InitializeComponent();
         }
-        private bool loginstate = false;
+        
 
         private void loginButton_Click(object sender, EventArgs e)
         {
             if (Dao.Employee.VerifyIdPassword(usrIdText.Text, passwdText.Text))
             {
-                MessageBox.Show(usrIdText.Text + "님, 안녕하세요!");
-                loginstate = true;
+                MessageBox.Show(Dao.Employee.GetName(usrIdText.Text) + "님 안녕하세요!", "로그인 성공");
+                ((Form1)(this.MdiParent)).loginState = true;
                 ((Form1)(this.MdiParent)).ShowForm("loginForm2");
             }
             else
-                MessageBox.Show("ID 또는 암호가 틀렸습니다!");
+            {
+                MessageBox.Show("ID 또는 암호가 틀렸습니다!", "로그인 실패");
+                ((Form1)(this.MdiParent)).loginState = false;
+            }
         }
 
         private void tealLogo_Click(object sender, EventArgs e)

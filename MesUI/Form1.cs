@@ -17,10 +17,15 @@ namespace MesUI
             InitializeComponent();
         }
 
+        public bool loginState = false;
+
         public Dictionary<string, Form> dictForm = new Dictionary<string, Form>();
 
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (loginState == false)
+                return;
+
             if (tabControl1.SelectedIndex == 0)
             {
                 for (int i = 0; i < dictForm.Count; i++)
