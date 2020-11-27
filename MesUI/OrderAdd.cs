@@ -44,7 +44,7 @@ namespace MesUI
             for (int i = 0; i < textboxList.Count(); i++)
             {
                 if(i ==2)
-                    strArray[i] = ((DateTimePicker)textboxList[i]).Text;
+                    strArray[i] = ((DateTimePicker)textboxList[i]).Value.ToString();
                 else
                     strArray[i] = ((TextBox)textboxList[i]).Text;
             }

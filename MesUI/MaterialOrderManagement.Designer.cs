@@ -62,11 +62,12 @@ namespace MesUI
             this.quantityDataGridViewTextBoxColumn,
             this.sellerNameDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.orderBindingSource;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Top;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 27;
-            this.dataGridView1.Size = new System.Drawing.Size(921, 514);
+            this.dataGridView1.Size = new System.Drawing.Size(1009, 514);
             this.dataGridView1.TabIndex = 0;
             // 
             // button4
@@ -77,6 +78,7 @@ namespace MesUI
             this.button4.TabIndex = 2;
             this.button4.Text = "삭제";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // SearchButton
             // 
@@ -196,7 +198,6 @@ namespace MesUI
             ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-
 
         }
 

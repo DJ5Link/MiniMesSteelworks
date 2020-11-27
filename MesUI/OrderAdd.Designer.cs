@@ -151,6 +151,7 @@ namespace MesUI
             // 
             // dateTimePicker
             // 
+            this.dateTimePicker.CustomFormat = "";
             this.dateTimePicker.Location = new System.Drawing.Point(128, 85);
             this.dateTimePicker.Name = "dateTimePicker";
             this.dateTimePicker.Size = new System.Drawing.Size(210, 25);

@@ -71,5 +71,15 @@ namespace MesUI
 
             newOrderAdd.Show();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("삭제 하시겠습니까?", "삭제 확인", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                Dao.Order.Delete(dataGridView1.SelectedRows[0].Cells[0].Value.ToString());
+                DisplayAllItem();
+            }
+
+        }
     }
 }

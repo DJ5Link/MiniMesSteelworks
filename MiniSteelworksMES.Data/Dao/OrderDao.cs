@@ -72,11 +72,11 @@ namespace MiniSteelworksMES.Data.Dao
 
             using (var context = new MesEntities())
             {
-                var result = context.Orders.SingleOrDefault(x => x.OrderId == id );
+                var result = context.Orders.SingleOrDefault(x => x.OrderId == id);
 
                 if (result != null)
                 {
-                    result.OrderId= Convert.ToInt32(list[0]);
+                    result.OrderId = Convert.ToInt32(list[0]);
                     result.ResourceId = rscId;
                     result.Date = Convert.ToDateTime(list[2]);
                     result.EmployeeId = Convert.ToInt32(list[3]);
@@ -87,7 +87,7 @@ namespace MiniSteelworksMES.Data.Dao
                 context.SaveChanges();
             }
 
-           
+
         }
 
         public void InsertOrder(string[] strArray)
@@ -108,6 +108,17 @@ namespace MiniSteelworksMES.Data.Dao
 
                 context.SaveChanges();
             }
+        }
+
+        public void Delete(string strOrderId)
+        {
+            using (var context = new MesEntities())
+            {
+                Order order = context.Orders.Find(Convert.ToInt32(strOrderId));
+                context.Orders.Remove(order);
+                context.SaveChanges();
+            }
+
         }
     }
 }
