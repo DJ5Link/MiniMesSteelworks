@@ -14,14 +14,18 @@ namespace MesUI
 {
     public partial class MaterialOrderManagement : Form
     {
+        OrderModify modForm = null;
+
         public MaterialOrderManagement()
         {
             InitializeComponent();
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
         private void MaterialOrderManagement_Load(object sender, EventArgs e)
         {
             DisplayAllItem();
         }
+
         private void SearchButton_Click(object sender, EventArgs e)
         {
             if (searchConditionComboBox.SelectedIndex == 1)
@@ -45,6 +49,27 @@ namespace MesUI
             orderBindingSource.DataSource = list;
         }
 
-       
+        private void btnModify_Click(object sender, EventArgs e)
+        {
+            string[] gridRow = new string[6];
+
+            for (int i = 0; i < dataGridView1.SelectedRows[0].Cells.Count; i++)
+            {
+                gridRow[i] = dataGridView1.SelectedRows[0].Cells[i].Value.ToString();
+            }
+
+            modForm = new OrderModify(gridRow);
+            modForm.parentForm = this;
+
+            modForm.Show();
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            OrderAdd newOrderAdd = new OrderAdd();
+            newOrderAdd.parentForm = this;
+
+            newOrderAdd.Show();
+        }
     }
 }
