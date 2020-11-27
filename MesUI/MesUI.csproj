@@ -167,7 +167,9 @@
       <DependentUpon>WarehouseRegister.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\MiniSteelworksMES.Data.Resource_Quote.datasource" />
     <None Include="Properties\DataSources\MiniSteelworksMES.Data.Transaction.datasource" />
+    <None Include="Properties\DataSources\ResourceQuoteForm.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

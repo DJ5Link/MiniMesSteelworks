@@ -58,7 +58,7 @@
     <Compile Include="Dao\EmployeeDao.cs" />
     <Compile Include="Dao\OrderDao.cs" />
     <Compile Include="Dao\ResourceDao.cs" />
-    <Compile Include="Dao\ResourceQuoteDao.cs" />
+    <Compile Include="Dao\Resource_QuoteDao.cs" />
     <Compile Include="Dao\TransactionDao.cs" />
     <Compile Include="Dao\WareHouseDap.cs" />
     <Compile Include="EFLibrary\BaseDao.cs" />
@@ -73,7 +73,7 @@
     <Compile Include="Entities\Employee.cs" />
     <Compile Include="Entities\Order.cs" />
     <Compile Include="Entities\Resourc.cs" />
-    <Compile Include="Entities\ResourceQuote.cs" />
+    <Compile Include="Entities\Resource_Quote.cs" />
     <Compile Include="Entities\Transaction.cs" />
     <Compile Include="Entities\WareHouse.cs" />
     <Compile Include="Mes.Context.cs">
@@ -98,7 +98,7 @@
     <Compile Include="Resource.cs">
       <DependentUpon>Mes.tt</DependentUpon>
     </Compile>
-    <Compile Include="ResourceQuote.cs">
+    <Compile Include="Resource_Quote.cs">
       <DependentUpon>Mes.tt</DependentUpon>
     </Compile>
     <Compile Include="Transaction.cs">
@@ -136,6 +136,8 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Properties\DataSources\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
