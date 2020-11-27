@@ -14,7 +14,7 @@ namespace MesUI
 {
     public partial class TransactionStock : Form
     {
-        //private object dbcontext;
+        TransactionModify modForm = null;
 
         public TransactionStock()
         {
@@ -51,7 +51,7 @@ namespace MesUI
         {
             //rscTransactionGrid.ColumnCount = 7;
 
-            //rscTransactionGrid.Columns[0].Width = 160;
+            rscTransactionGrid.Columns[2].Width = 160;
 
             //rscTransactionGrid.Columns[0].Name = "시각";
             //rscTransactionGrid.Columns[1].Name = "창고";
@@ -64,14 +64,30 @@ namespace MesUI
             rscTransactionGrid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
 
-        private void btnModify_Click(object sender, EventArgs e)
+        private void rscTransactionGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
 
-        private void rscTransactionGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void btnModify_Click(object sender, EventArgs e)
         {
+            string[] gridRow = new string[7];
 
+            for (int i = 0; i < rscTransactionGrid.SelectedRows[0].Cells.Count; i++)
+            {
+                gridRow[i] = rscTransactionGrid.SelectedRows[0].Cells[i].Value.ToString();
+            }
+
+            modForm = new TransactionModify(gridRow);
+            modForm.parentForm = this;
+
+            modForm.Show();
+        }
+
+        public void DisplayAllItem()
+        {
+            List<Transaction> list = Dao.Transaction.GetAll();
+            bdsTransaction.DataSource = list;
         }
     }
 }
