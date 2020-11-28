@@ -54,6 +54,8 @@ namespace MesUI
             this.transactionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.transactionBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.transactionBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.resourceQuoteFormBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.resourceQuoteBindingSource)).BeginInit();
@@ -67,9 +69,9 @@ namespace MesUI
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(536, 92);
+            this.button1.Location = new System.Drawing.Point(570, 121);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(116, 43);
+            this.button1.Size = new System.Drawing.Size(82, 32);
             this.button1.TabIndex = 15;
             this.button1.Text = "조회";
             this.button1.UseVisualStyleBackColor = true;
@@ -80,9 +82,9 @@ namespace MesUI
             this.uiDt_EndTime.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.uiDt_EndTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.uiDt_EndTime.Location = new System.Drawing.Point(536, 65);
+            this.uiDt_EndTime.Location = new System.Drawing.Point(562, 94);
             this.uiDt_EndTime.Name = "uiDt_EndTime";
-            this.uiDt_EndTime.Size = new System.Drawing.Size(116, 21);
+            this.uiDt_EndTime.Size = new System.Drawing.Size(98, 21);
             this.uiDt_EndTime.TabIndex = 14;
             this.uiDt_EndTime.ValueChanged += new System.EventHandler(this.uiDt_EndTime_ValueChanged);
             // 
@@ -91,9 +93,9 @@ namespace MesUI
             this.uiDt_StartTime.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.uiDt_StartTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.uiDt_StartTime.Location = new System.Drawing.Point(536, 38);
+            this.uiDt_StartTime.Location = new System.Drawing.Point(562, 41);
             this.uiDt_StartTime.Name = "uiDt_StartTime";
-            this.uiDt_StartTime.Size = new System.Drawing.Size(116, 21);
+            this.uiDt_StartTime.Size = new System.Drawing.Size(98, 21);
             this.uiDt_StartTime.TabIndex = 13;
             this.uiDt_StartTime.ValueChanged += new System.EventHandler(this.uiDt_StartTime_ValueChanged);
             // 
@@ -291,6 +293,28 @@ namespace MesUI
             // 
             this.transactionBindingSource2.DataSource = typeof(MiniSteelworksMES.Data.Transaction);
             // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(584, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(53, 12);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "시작날짜";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(584, 79);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(53, 12);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "종료날짜";
+            // 
             // resourceQuoteFormBindingSource
             // 
             this.resourceQuoteFormBindingSource.DataSource = typeof(MesUI.ResourceQuoteForm);
@@ -300,6 +324,8 @@ namespace MesUI
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1081, 530);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.uiDt_EndTime);
             this.Controls.Add(this.uiDt_StartTime);
@@ -344,5 +370,7 @@ namespace MesUI
         private System.Windows.Forms.DataGridViewTextBoxColumn aluminumQuoteDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ironOreQuoteDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn copperQuoteDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
