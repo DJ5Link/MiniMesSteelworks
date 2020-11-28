@@ -83,6 +83,11 @@ namespace MesUI
             {
                 MessageBox.Show("제대로 검색해라 바보야", "오류");
             }
+            for (int i = 0; i < chart1.Series.Count; i++)
+            {
+                chart1.Series[i].Enabled = true;
+                chart1.Series[i].XValueMember = "date";
+            }
 
             resourceQuoteBindingSource.DataSource = list;
         }
