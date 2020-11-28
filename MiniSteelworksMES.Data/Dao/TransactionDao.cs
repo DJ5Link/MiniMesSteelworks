@@ -26,6 +26,17 @@ namespace MiniSteelworksMES.Data
             }
         }
 
+        public List<Transaction> GetAllByPagingQuery(int skipCount)
+        {
+            using (var context = new MesEntities())
+            {
+                var query = (from x in context.Transactions
+                            select x).OrderBy( x => x.Date).Skip(5).Take(5);
+
+                return query.ToList();
+            }
+        }
+
         public List<Transaction> GetByDate(DateTime start, DateTime end)
         {
             using (var context = new MesEntities())
@@ -64,6 +75,34 @@ namespace MiniSteelworksMES.Data
                 }
 
                 context.SaveChanges();
+            }
+        }
+
+        public List<Transaction> GetByResourceId(int rscId)
+        {
+            using (var context = new MesEntities())
+            {
+                var query = from x in context.Transactions
+                            where x.ResourceId == rscId
+                            select x;
+
+                List<Transaction> list = query.ToList();
+
+                return query.ToList();
+            }
+        }
+
+        public List<Transaction> GetByResourceIdAndDate(int rscId, DateTime start, DateTime end)
+        {
+            using (var context = new MesEntities())
+            {
+                var query = from x in context.Transactions
+                            where x.Date >= start && x.Date <= end && x.ResourceId == rscId
+                            select x;
+
+                List<Transaction> list = query.ToList();
+
+                return query.ToList();
             }
         }
     }

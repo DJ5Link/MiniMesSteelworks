@@ -16,11 +16,28 @@ namespace MesUI
     {
         TransactionModify modForm = null;
 
+        public Dictionary<string, int> dictResource = null;
+
         public TransactionStock()
         {
             InitializeComponent();
 
             SetGridLayout();
+
+            SetResourceId();
+        }
+
+        private void SetResourceId()
+        {
+            List<Resource> list = ResourceInfo.getInstance();
+            dictResource = new Dictionary<string, int>();
+
+            for (int i = 0; i < list.Count; i++)
+            {
+                comboBoxRscId.Items.Add(list[i].Name);
+
+                dictResource.Add(list[i].Name, list[i].ResourceId);
+            }
         }
 
         private void TransactionStock_Load(object sender, EventArgs e)
@@ -33,15 +50,26 @@ namespace MesUI
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
+            List<Transaction> list = null;
 
-            List<Transaction> list = Dao.Transaction.GetByDate(dateTimePickerStart.Value, dateTimePickerEnd.Value);
-
-            if(list.Count == 0)
+            if (checkBoxDate.Checked && !checkBoxDate.Checked)
+                list = Dao.Transaction.GetByDate(dateTimePickerStart.Value, dateTimePickerEnd.Value);
+            else if (checkBoxResourceId.Checked && checkBoxDate.Checked)
+                list = Dao.Transaction.GetByResourceIdAndDate(dictResource[comboBoxRscId.Text], dateTimePickerStart.Value, dateTimePickerEnd.Value);
+            else if (checkBoxResourceId.Checked)
+                list = Dao.Transaction.GetByResourceId(dictResource[comboBoxRscId.Text]);
+            else
             {
-                MessageBox.Show("0건 조회 되었습니다", "조회 결과");
+                //list = Dao.Transaction.GetAll();
+                list = Dao.Transaction.GetAllByPagingQuery();
             }
 
             bdsTransaction.DataSource = list;
+
+            if (list.Count == 0)
+            {
+                MessageBox.Show("0건 조회 되었습니다", "조회 결과");
+            }
 
                 //foreach (var x in list)
                 //{
@@ -100,6 +128,16 @@ namespace MesUI
         {
             List<Transaction> list = Dao.Transaction.GetAll();
             bdsTransaction.DataSource = list;
+        }
+
+        private void labelPage1_MouseHover(object sender, EventArgs e)
+        {
+            ((Label)sender).ForeColor = Color.Aqua;
+        }
+
+        private void labelPage1_MouseLeave(object sender, EventArgs e)
+        {
+            ((Label)sender).ForeColor = Color.Black;
         }
     }
 }

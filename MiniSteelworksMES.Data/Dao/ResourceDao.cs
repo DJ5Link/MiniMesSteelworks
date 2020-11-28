@@ -16,5 +16,16 @@ namespace MiniSteelworksMES.Data.Dao
         {
             return x => x.ResourceId == key;
         }
+
+        public List<Resource> GetResourceInfo()
+        {
+            using (var context = new MesEntities())
+            {
+                var query = from x in context.Resources
+                            select x;
+
+                return query.ToList();
+            }
+        }
     }
 }

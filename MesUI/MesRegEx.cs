@@ -16,7 +16,7 @@ namespace MesUI
         };
         public static bool IsNumber(string data)
         {
-            Regex rex = new Regex(@"\d{1}?");
+            Regex rex = new Regex(@"\d{1}?");  // d1 숫자 1자리 형식
 
             // Find matches.
             MatchCollection matches = rex.Matches(data);
