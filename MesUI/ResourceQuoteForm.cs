@@ -16,13 +16,34 @@ namespace MesUI
     {
         public ResourceQuoteForm()
         {
+            load();
+        }
+
+        private void Reset_Click(object sender, EventArgs e)
+        {
+            this.Controls.Clear();
+            load();
+            DisplayQuote();
+        }
+        public void load()
+        {
             InitializeComponent();
             checkBox1.CheckedChanged += checkBox_CheckedChanged;
             checkBox2.CheckedChanged += checkBox_CheckedChanged;
             checkBox3.CheckedChanged += checkBox_CheckedChanged;
             checkBox4.CheckedChanged += checkBox_CheckedChanged;
-            SetGridLayout();
 
+        }
+
+        private void ResourceQuoteForm_Load(object sender, EventArgs e)
+        {
+            DisplayQuote();
+        }
+
+        public void DisplayQuote()
+        {
+            List<Resource_Quote> list = Dao.Resource_Quote.GetAll();
+            resourceQuoteBindingSource.DataSource = list;
         }
 
         private void checkBox_CheckedChanged(object sender, EventArgs e)
@@ -36,55 +57,46 @@ namespace MesUI
             for (int i = 0; i < boxes.Length; i++)
             {
                 if (boxes[i].Checked)
-                { chart1.Series[i].Enabled = true; }
+                {
+                    chart1.Series[i].Enabled = true;
+                    AutoMaxMin();
+                }
                 else
-                { chart1.Series[i].Enabled = false; }
-            } 
+                {
+                    chart1.Series[i].Enabled = false;
+                    AutoMaxMin();
+                }
+            }
         }
 
-        private void ResourceQuoteForm_Load(object sender, EventArgs e)
+        private  void AutoMaxMin()
         {
-            DisplayQuote();
+            chart1.ChartAreas[0].RecalculateAxesScale();
+            chart1.ChartAreas[0].AxisY.IsStartedFromZero = false;
         }
 
-        private void SetGridLayout()
+        private void PeriodSearch_Click(object sender, EventArgs e)
         {
-            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-        }
+            DateTime dt1 = this.uiDt_StartTime.Value.Date;
+            DateTime dt2 = this.uiDt_EndTime.Value.Date;
 
-        public void DisplayQuote()
-        {
-            List<Resource_Quote> list = Dao.Resource_Quote.GetAll();
-            resourceQuoteBindingSource.DataSource = list;
-        }
-
-        private void uiDt_StartTime_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void uiDt_EndTime_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            List<Resource_Quote> list = Dao.Resource_Quote.GetByDate(uiDt_StartTime.Value, uiDt_EndTime.Value);
+            List<Resource_Quote> list = Dao.Resource_Quote.GetByDate(dt1, dt2);
 
             if (uiDt_StartTime.Value > uiDt_EndTime.Value)
             {
-                MessageBox.Show("제대로 검색해라 바보야", "오류");
+                MessageBox.Show("기간이 잘못되었음", "오류");
             }
+
             for (int i = 0; i < chart1.Series.Count; i++)
             {
-                chart1.Series[i].Enabled = true;
                 chart1.Series[i].XValueMember = "date";
             }
-            
+
             chart1.ChartAreas[0].AxisX.Interval = 1;
 
             resourceQuoteBindingSource.DataSource = list;
+
         }
+
     }
 }
