@@ -77,7 +77,14 @@ namespace MesUI
 
         private void button1_Click(object sender, EventArgs e)
         {
+            List<Resource_Quote> list = Dao.Resource_Quote.GetByDate(uiDt_StartTime.Value, uiDt_EndTime.Value);
 
+            if (uiDt_StartTime.Value > uiDt_EndTime.Value)
+            {
+                MessageBox.Show("제대로 검색해라 바보야", "오류");
+            }
+
+            resourceQuoteBindingSource.DataSource = list;
         }
     }
 }
