@@ -18,6 +18,12 @@ namespace MesUI
 
         public Dictionary<string, int> dictResource = null;
 
+        /// <summary>
+        ///  페이지 단위로 보여주기 위한 페이지 개수를 저장하는 변수 선언
+        /// </summary>
+        private int pageCount = 0; // 결과가 많을 때 나눠서 보여줄 페이지수
+        private int rowsCountPerPage = 20; // 스킵해서 조회할 건수
+
         public TransactionStock()
         {
             InitializeComponent();
@@ -25,6 +31,20 @@ namespace MesUI
             SetGridLayout();
 
             SetResourceId();
+        }
+
+        private void DisplayPageControl(bool showOrNot)
+        {
+            if (showOrNot)
+            {
+                labelPageNumber.Show();
+                comboBoxPageNumber.Show();
+            }
+            else
+            {
+                labelPageNumber.Hide();
+                comboBoxPageNumber.Hide();
+            }
         }
 
         private void SetResourceId()
@@ -42,14 +62,18 @@ namespace MesUI
 
         private void TransactionStock_Load(object sender, EventArgs e)
         {
-            //TransactionStock trStockForm = new TransactionStock();
-            //formList.Add(trStockForm);
-            //trStockForm.MdiParent = this;
-
+            DisplayPageControl(false);
         }
 
+        /// <summary>
+        /// 조회 쿼리 결과 값을 화면에 출력한다
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnSearch_Click(object sender, EventArgs e)
         {
+            DisplayPageControl(false);
+
             List<Transaction> list = null;
 
             if (checkBoxDate.Checked && !checkBoxResourceId.Checked)
@@ -59,9 +83,20 @@ namespace MesUI
             else if (checkBoxResourceId.Checked)
                 list = Dao.Transaction.GetByResourceId(dictResource[comboBoxRscId.Text]);
             else
-            {
-                //list = Dao.Transaction.GetAll();
-                list = Dao.Transaction.GetAllByPagingQuery(20);
+            { // 조건 없이 모두 조회한다, 페이징 처리를 해야 한다
+                pageCount = Dao.Transaction.GetAllByPageCount(rowsCountPerPage);
+
+                for(int i=1; i<=pageCount; i++)
+                    comboBoxPageNumber.Items.Add(i.ToString());
+
+                if (pageCount > 1)
+                {
+                    comboBoxPageNumber.SelectedIndex = 0;
+                    list = Dao.Transaction.GetAllByPagingQuery(1);
+                    DisplayPageControl(true);
+                }
+                else
+                    list = Dao.Transaction.GetAll();
             }
 
             bdsTransaction.DataSource = list;
@@ -70,15 +105,6 @@ namespace MesUI
             {
                 MessageBox.Show("0건 조회 되었습니다", "조회 결과");
             }
-
-                //foreach (var x in list)
-                //{
-                //    string[] row = { x.Date.ToString(), x.WareHouseId.ToString()
-                //            , x.EmployeeId.ToString(), x.Type == false ? "입고" : "출고"
-                //    , x.Origin, x.SellerName };
-
-            //    rscTransactionGrid.Rows.Add(row);
-            //}
         }
 
         private void SetGridLayout()
@@ -107,7 +133,7 @@ namespace MesUI
         {
             if( rscTransactionGrid.RowCount < 1 )
             {
-                MessageBox.Show("조회 후 수정 가능합니다", "수정");
+                MessageBox.Show("조회 후 수정 가능합니다", "수정 오류");
                 return;
             }
 
@@ -138,6 +164,15 @@ namespace MesUI
         private void labelPage1_MouseLeave(object sender, EventArgs e)
         {
             ((Label)sender).ForeColor = Color.Black;
+        }
+
+        private void comboBoxPageNumber_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            List<Transaction> list = null;
+
+            list = Dao.Transaction.GetAllByPagingQuery(Convert.ToInt32(comboBoxPageNumber.Text));
+
+            bdsTransaction.DataSource = list;
         }
     }
 }

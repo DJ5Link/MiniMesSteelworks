@@ -10,6 +10,7 @@ namespace MiniSteelworksMES.Data
 {
     public class TransactionDao : TripleKeyDao<Transaction, int, DateTime, int>
     {
+        private int rowsCountPerPage = 20;
         protected override Expression<Func<Transaction, bool>> IsKey(int key1, DateTime key2, int key3)
         {
             return x => x.ResourceId == key1 && x.Date == key2;
@@ -26,14 +27,38 @@ namespace MiniSteelworksMES.Data
             }
         }
 
-        public List<Transaction> GetAllByPagingQuery(int skipCount)
+        public List<Transaction> GetAllByPagingQuery(int showPage)
         {
             using (var context = new MesEntities())
             {
+                int totalCount = (from x in context.Transactions
+                             select x).Count();
+
+                int nPageCount = 0;
+                nPageCount = totalCount / rowsCountPerPage;
+                if ( totalCount % rowsCountPerPage != 0)
+                    nPageCount += 1;
+
                 var query = (from x in context.Transactions
-                            select x).OrderBy( x => x.Date).Skip(skipCount).Take(skipCount);
+                            select x).OrderBy( x => x.Date).Skip((showPage-1) * rowsCountPerPage).Take(20);
 
                 return query.ToList();
+            }
+        }
+
+        public int GetAllByPageCount(int skipCount)
+        {
+            using (var context = new MesEntities())
+            {
+                int totalCount = (from x in context.Transactions
+                                  select x).Count();
+
+                int nPageCount = 0;
+                nPageCount = totalCount / skipCount;
+                if (totalCount % skipCount != 0)
+                    nPageCount += 1;
+
+                return nPageCount;
             }
         }
 

@@ -40,12 +40,9 @@ namespace MesUI
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.checkBoxDate = new System.Windows.Forms.CheckBox();
             this.checkBoxResourceId = new System.Windows.Forms.CheckBox();
-            this.labelPage1 = new System.Windows.Forms.Label();
-            this.labelPage2 = new System.Windows.Forms.Label();
-            this.labelPage3 = new System.Windows.Forms.Label();
-            this.labelPage4 = new System.Windows.Forms.Label();
-            this.labelPage5 = new System.Windows.Forms.Label();
+            this.labelPageNumber = new System.Windows.Forms.Label();
             this.comboBoxRscId = new System.Windows.Forms.ComboBox();
+            this.comboBoxPageNumber = new System.Windows.Forms.ComboBox();
             this.resourceIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sellerNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -137,14 +134,11 @@ namespace MesUI
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.comboBoxPageNumber);
             this.groupBox2.Controls.Add(this.checkBoxResourceId);
             this.groupBox2.Controls.Add(this.comboBoxRscId);
             this.groupBox2.Controls.Add(this.checkBoxDate);
-            this.groupBox2.Controls.Add(this.labelPage5);
-            this.groupBox2.Controls.Add(this.labelPage4);
-            this.groupBox2.Controls.Add(this.labelPage3);
-            this.groupBox2.Controls.Add(this.labelPage2);
-            this.groupBox2.Controls.Add(this.labelPage1);
+            this.groupBox2.Controls.Add(this.labelPageNumber);
             this.groupBox2.Controls.Add(this.btnSearch);
             this.groupBox2.Controls.Add(this.dateTimePickerStart);
             this.groupBox2.Controls.Add(this.btnModify);
@@ -178,52 +172,16 @@ namespace MesUI
             this.checkBoxResourceId.Text = "원자재 ID";
             this.checkBoxResourceId.UseVisualStyleBackColor = true;
             // 
-            // labelPage1
+            // labelPageNumber
             // 
-            this.labelPage1.AutoSize = true;
-            this.labelPage1.Location = new System.Drawing.Point(293, 30);
-            this.labelPage1.Name = "labelPage1";
-            this.labelPage1.Size = new System.Drawing.Size(40, 12);
-            this.labelPage1.TabIndex = 7;
-            this.labelPage1.Text = "Page1";
-            this.labelPage1.MouseLeave += new System.EventHandler(this.labelPage1_MouseLeave);
-            this.labelPage1.MouseHover += new System.EventHandler(this.labelPage1_MouseHover);
-            // 
-            // labelPage2
-            // 
-            this.labelPage2.AutoSize = true;
-            this.labelPage2.Location = new System.Drawing.Point(339, 30);
-            this.labelPage2.Name = "labelPage2";
-            this.labelPage2.Size = new System.Drawing.Size(40, 12);
-            this.labelPage2.TabIndex = 7;
-            this.labelPage2.Text = "Page2";
-            // 
-            // labelPage3
-            // 
-            this.labelPage3.AutoSize = true;
-            this.labelPage3.Location = new System.Drawing.Point(385, 30);
-            this.labelPage3.Name = "labelPage3";
-            this.labelPage3.Size = new System.Drawing.Size(40, 12);
-            this.labelPage3.TabIndex = 7;
-            this.labelPage3.Text = "Page3";
-            // 
-            // labelPage4
-            // 
-            this.labelPage4.AutoSize = true;
-            this.labelPage4.Location = new System.Drawing.Point(431, 30);
-            this.labelPage4.Name = "labelPage4";
-            this.labelPage4.Size = new System.Drawing.Size(40, 12);
-            this.labelPage4.TabIndex = 7;
-            this.labelPage4.Text = "Page4";
-            // 
-            // labelPage5
-            // 
-            this.labelPage5.AutoSize = true;
-            this.labelPage5.Location = new System.Drawing.Point(477, 30);
-            this.labelPage5.Name = "labelPage5";
-            this.labelPage5.Size = new System.Drawing.Size(40, 12);
-            this.labelPage5.TabIndex = 7;
-            this.labelPage5.Text = "Page5";
+            this.labelPageNumber.AutoSize = true;
+            this.labelPageNumber.Location = new System.Drawing.Point(255, 36);
+            this.labelPageNumber.Name = "labelPageNumber";
+            this.labelPageNumber.Size = new System.Drawing.Size(34, 12);
+            this.labelPageNumber.TabIndex = 7;
+            this.labelPageNumber.Text = "Page";
+            this.labelPageNumber.MouseLeave += new System.EventHandler(this.labelPage1_MouseLeave);
+            this.labelPageNumber.MouseHover += new System.EventHandler(this.labelPage1_MouseHover);
             // 
             // comboBoxRscId
             // 
@@ -232,6 +190,15 @@ namespace MesUI
             this.comboBoxRscId.Name = "comboBoxRscId";
             this.comboBoxRscId.Size = new System.Drawing.Size(121, 20);
             this.comboBoxRscId.TabIndex = 9;
+            // 
+            // comboBoxPageNumber
+            // 
+            this.comboBoxPageNumber.FormattingEnabled = true;
+            this.comboBoxPageNumber.Location = new System.Drawing.Point(295, 33);
+            this.comboBoxPageNumber.Name = "comboBoxPageNumber";
+            this.comboBoxPageNumber.Size = new System.Drawing.Size(121, 20);
+            this.comboBoxPageNumber.TabIndex = 10;
+            this.comboBoxPageNumber.SelectedIndexChanged += new System.EventHandler(this.comboBoxPageNumber_SelectedIndexChanged);
             // 
             // resourceIdDataGridViewTextBoxColumn
             // 
@@ -324,11 +291,8 @@ namespace MesUI
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.CheckBox checkBoxDate;
         private System.Windows.Forms.CheckBox checkBoxResourceId;
-        private System.Windows.Forms.Label labelPage5;
-        private System.Windows.Forms.Label labelPage4;
-        private System.Windows.Forms.Label labelPage3;
-        private System.Windows.Forms.Label labelPage2;
-        private System.Windows.Forms.Label labelPage1;
+        private System.Windows.Forms.Label labelPageNumber;
         private System.Windows.Forms.ComboBox comboBoxRscId;
+        private System.Windows.Forms.ComboBox comboBoxPageNumber;
     }
 }
