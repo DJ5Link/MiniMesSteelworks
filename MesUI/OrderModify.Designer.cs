@@ -46,113 +46,106 @@ namespace MesUI
             // 
             // textBoxSellerName
             // 
-            this.textBoxSellerName.Location = new System.Drawing.Point(128, 187);
-            this.textBoxSellerName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBoxSellerName.Location = new System.Drawing.Point(112, 150);
             this.textBoxSellerName.Name = "textBoxSellerName";
-            this.textBoxSellerName.Size = new System.Drawing.Size(210, 25);
+            this.textBoxSellerName.Size = new System.Drawing.Size(184, 21);
             this.textBoxSellerName.TabIndex = 12;
             // 
             // textBoxQuantity
             // 
-            this.textBoxQuantity.Location = new System.Drawing.Point(128, 153);
-            this.textBoxQuantity.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBoxQuantity.Location = new System.Drawing.Point(112, 122);
             this.textBoxQuantity.Name = "textBoxQuantity";
-            this.textBoxQuantity.Size = new System.Drawing.Size(210, 25);
+            this.textBoxQuantity.Size = new System.Drawing.Size(184, 21);
             this.textBoxQuantity.TabIndex = 13;
             // 
             // textBoxEmployeeId
             // 
-            this.textBoxEmployeeId.Location = new System.Drawing.Point(128, 119);
-            this.textBoxEmployeeId.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBoxEmployeeId.Location = new System.Drawing.Point(112, 95);
             this.textBoxEmployeeId.Name = "textBoxEmployeeId";
-            this.textBoxEmployeeId.Size = new System.Drawing.Size(210, 25);
+            this.textBoxEmployeeId.Size = new System.Drawing.Size(184, 21);
             this.textBoxEmployeeId.TabIndex = 14;
             // 
             // textBoxDate
             // 
-            this.textBoxDate.Location = new System.Drawing.Point(128, 86);
-            this.textBoxDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBoxDate.Location = new System.Drawing.Point(112, 69);
             this.textBoxDate.Name = "textBoxDate";
-            this.textBoxDate.Size = new System.Drawing.Size(210, 25);
+            this.textBoxDate.Size = new System.Drawing.Size(184, 21);
             this.textBoxDate.TabIndex = 15;
             // 
             // textBoxResoureId
             // 
-            this.textBoxResoureId.Location = new System.Drawing.Point(128, 52);
-            this.textBoxResoureId.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBoxResoureId.Location = new System.Drawing.Point(112, 42);
             this.textBoxResoureId.Name = "textBoxResoureId";
-            this.textBoxResoureId.Size = new System.Drawing.Size(210, 25);
+            this.textBoxResoureId.Size = new System.Drawing.Size(184, 21);
             this.textBoxResoureId.TabIndex = 16;
             // 
             // textBoxOrderId
             // 
             this.textBoxOrderId.Enabled = false;
-            this.textBoxOrderId.Location = new System.Drawing.Point(128, 18);
-            this.textBoxOrderId.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBoxOrderId.Location = new System.Drawing.Point(112, 14);
             this.textBoxOrderId.Name = "textBoxOrderId";
-            this.textBoxOrderId.Size = new System.Drawing.Size(210, 25);
+            this.textBoxOrderId.Size = new System.Drawing.Size(184, 21);
             this.textBoxOrderId.TabIndex = 17;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 191);
+            this.label6.Location = new System.Drawing.Point(10, 153);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(52, 15);
+            this.label6.Size = new System.Drawing.Size(41, 12);
             this.label6.TabIndex = 5;
             this.label6.Text = "판매처";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 157);
+            this.label5.Location = new System.Drawing.Point(10, 126);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(37, 15);
+            this.label5.Size = new System.Drawing.Size(29, 12);
             this.label5.TabIndex = 6;
             this.label5.Text = "수량";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 123);
+            this.label4.Location = new System.Drawing.Point(10, 98);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 15);
+            this.label4.Size = new System.Drawing.Size(56, 12);
             this.label4.TabIndex = 7;
-            this.label4.Text = "담당자";
+            this.label4.Text = "담당자 ID";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 89);
+            this.label3.Location = new System.Drawing.Point(10, 71);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 15);
+            this.label3.Size = new System.Drawing.Size(53, 12);
             this.label3.TabIndex = 8;
             this.label3.Text = "주문시각";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 56);
+            this.label2.Location = new System.Drawing.Point(10, 45);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 15);
+            this.label2.Size = new System.Drawing.Size(56, 12);
             this.label2.TabIndex = 9;
             this.label2.Text = "원자재 ID";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 22);
+            this.label1.Location = new System.Drawing.Point(10, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 15);
+            this.label1.Size = new System.Drawing.Size(53, 12);
             this.label1.TabIndex = 10;
             this.label1.Text = "주문번호";
             // 
             // btnModify
             // 
-            this.btnModify.Location = new System.Drawing.Point(252, 231);
-            this.btnModify.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnModify.Location = new System.Drawing.Point(220, 185);
             this.btnModify.Name = "btnModify";
-            this.btnModify.Size = new System.Drawing.Size(86, 29);
+            this.btnModify.Size = new System.Drawing.Size(75, 23);
             this.btnModify.TabIndex = 3;
             this.btnModify.Text = "수정";
             this.btnModify.UseVisualStyleBackColor = true;
@@ -160,9 +153,9 @@ namespace MesUI
             // 
             // OrderModify
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(359, 284);
+            this.ClientSize = new System.Drawing.Size(314, 227);
             this.Controls.Add(this.textBoxSellerName);
             this.Controls.Add(this.textBoxQuantity);
             this.Controls.Add(this.textBoxEmployeeId);
@@ -176,6 +169,7 @@ namespace MesUI
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnModify);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "OrderModify";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "주문 정보 수정 화면";

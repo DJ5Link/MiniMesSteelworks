@@ -82,5 +82,17 @@ namespace MiniSteelworksMES.Data.Dao
                 return query.ToList();
             }
         }
+
+        public List<Employee> GetByPK(int employeeId)
+        {
+            using (var context = new MesEntities())
+            {
+                var query = from x in context.Employees
+                            where x.EmployeeId == employeeId
+                            select x;
+
+                return query.ToList();
+            }
+        }
     }
 }
