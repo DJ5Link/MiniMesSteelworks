@@ -57,10 +57,22 @@ namespace MesUI
             for (int i = 0; i < boxes.Length; i++)
             {
                 if (boxes[i].Checked)
-                { chart1.Series[i].Enabled = true; }
+                {
+                    chart1.Series[i].Enabled = true;
+                    AutoMaxMin();
+                }
                 else
-                { chart1.Series[i].Enabled = false; }
+                {
+                    chart1.Series[i].Enabled = false;
+                    AutoMaxMin();
+                }
             }
+        }
+
+        private  void AutoMaxMin()
+        {
+            chart1.ChartAreas[0].RecalculateAxesScale();
+            chart1.ChartAreas[0].AxisY.IsStartedFromZero = false;
         }
 
         private void PeriodSearch_Click(object sender, EventArgs e)
@@ -69,7 +81,7 @@ namespace MesUI
 
             if (uiDt_StartTime.Value > uiDt_EndTime.Value)
             {
-                MessageBox.Show("제대로 검색해라 바보야", "오류");
+                MessageBox.Show("기간이 잘못되었음", "오류");
             }
 
             for (int i = 0; i < chart1.Series.Count; i++)
