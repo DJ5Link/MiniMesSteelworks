@@ -71,6 +71,12 @@ namespace MesUI
 
         private void btnModify_Click(object sender, EventArgs e)
         {
+            if( rscTransactionGrid.RowCount < 1 )
+            {
+                MessageBox.Show("조회 후 수정 가능합니다", "수정");
+                return;
+            }
+
             string[] gridRow = new string[7];
 
             for (int i = 0; i < rscTransactionGrid.SelectedRows[0].Cells.Count; i++)

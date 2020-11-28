@@ -33,6 +33,8 @@ namespace MesUI
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnModify = new System.Windows.Forms.Button();
             this.rscTransactionGrid = new System.Windows.Forms.DataGridView();
+            this.bdsTransaction = new System.Windows.Forms.BindingSource(this.components);
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.resourceIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sellerNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,8 +42,6 @@ namespace MesUI
             this.employeeIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.typeTextDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.wareHouseIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bdsTransaction = new System.Windows.Forms.BindingSource(this.components);
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.rscTransactionGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsTransaction)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -91,49 +91,6 @@ namespace MesUI
             this.rscTransactionGrid.TabIndex = 3;
             this.rscTransactionGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.rscTransactionGrid_CellContentClick);
             // 
-            // resourceIdDataGridViewTextBoxColumn
-            // 
-            this.resourceIdDataGridViewTextBoxColumn.DataPropertyName = "ResourceId";
-            this.resourceIdDataGridViewTextBoxColumn.HeaderText = "ResourceId";
-            this.resourceIdDataGridViewTextBoxColumn.Name = "resourceIdDataGridViewTextBoxColumn";
-            // 
-            // sellerNameDataGridViewTextBoxColumn
-            // 
-            this.sellerNameDataGridViewTextBoxColumn.DataPropertyName = "SellerName";
-            this.sellerNameDataGridViewTextBoxColumn.HeaderText = "SellerName";
-            this.sellerNameDataGridViewTextBoxColumn.Name = "sellerNameDataGridViewTextBoxColumn";
-            // 
-            // dateDataGridViewTextBoxColumn
-            // 
-            this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
-            this.dateDataGridViewTextBoxColumn.HeaderText = "Date";
-            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
-            // 
-            // originDataGridViewTextBoxColumn
-            // 
-            this.originDataGridViewTextBoxColumn.DataPropertyName = "Origin";
-            this.originDataGridViewTextBoxColumn.HeaderText = "Origin";
-            this.originDataGridViewTextBoxColumn.Name = "originDataGridViewTextBoxColumn";
-            // 
-            // employeeIdDataGridViewTextBoxColumn
-            // 
-            this.employeeIdDataGridViewTextBoxColumn.DataPropertyName = "EmployeeId";
-            this.employeeIdDataGridViewTextBoxColumn.HeaderText = "EmployeeId";
-            this.employeeIdDataGridViewTextBoxColumn.Name = "employeeIdDataGridViewTextBoxColumn";
-            // 
-            // typeTextDataGridViewTextBoxColumn
-            // 
-            this.typeTextDataGridViewTextBoxColumn.DataPropertyName = "TypeText";
-            this.typeTextDataGridViewTextBoxColumn.HeaderText = "TypeText";
-            this.typeTextDataGridViewTextBoxColumn.Name = "typeTextDataGridViewTextBoxColumn";
-            this.typeTextDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // wareHouseIdDataGridViewTextBoxColumn
-            // 
-            this.wareHouseIdDataGridViewTextBoxColumn.DataPropertyName = "WareHouseId";
-            this.wareHouseIdDataGridViewTextBoxColumn.HeaderText = "WareHouseId";
-            this.wareHouseIdDataGridViewTextBoxColumn.Name = "wareHouseIdDataGridViewTextBoxColumn";
-            // 
             // bdsTransaction
             // 
             this.bdsTransaction.DataSource = typeof(MiniSteelworksMES.Data.Transaction);
@@ -147,6 +104,55 @@ namespace MesUI
             this.groupBox1.Size = new System.Drawing.Size(162, 40);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
+            // 
+            // resourceIdDataGridViewTextBoxColumn
+            // 
+            this.resourceIdDataGridViewTextBoxColumn.DataPropertyName = "ResourceId";
+            this.resourceIdDataGridViewTextBoxColumn.HeaderText = "원자재 ID";
+            this.resourceIdDataGridViewTextBoxColumn.Name = "resourceIdDataGridViewTextBoxColumn";
+            this.resourceIdDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // sellerNameDataGridViewTextBoxColumn
+            // 
+            this.sellerNameDataGridViewTextBoxColumn.DataPropertyName = "SellerName";
+            this.sellerNameDataGridViewTextBoxColumn.HeaderText = "수입처";
+            this.sellerNameDataGridViewTextBoxColumn.Name = "sellerNameDataGridViewTextBoxColumn";
+            this.sellerNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dateDataGridViewTextBoxColumn
+            // 
+            this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
+            this.dateDataGridViewTextBoxColumn.HeaderText = "시각";
+            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
+            this.dateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // originDataGridViewTextBoxColumn
+            // 
+            this.originDataGridViewTextBoxColumn.DataPropertyName = "Origin";
+            this.originDataGridViewTextBoxColumn.HeaderText = "원산지";
+            this.originDataGridViewTextBoxColumn.Name = "originDataGridViewTextBoxColumn";
+            this.originDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // employeeIdDataGridViewTextBoxColumn
+            // 
+            this.employeeIdDataGridViewTextBoxColumn.DataPropertyName = "EmployeeId";
+            this.employeeIdDataGridViewTextBoxColumn.HeaderText = "담당자 ID";
+            this.employeeIdDataGridViewTextBoxColumn.Name = "employeeIdDataGridViewTextBoxColumn";
+            this.employeeIdDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // typeTextDataGridViewTextBoxColumn
+            // 
+            this.typeTextDataGridViewTextBoxColumn.DataPropertyName = "TypeText";
+            this.typeTextDataGridViewTextBoxColumn.HeaderText = "입출고 구분";
+            this.typeTextDataGridViewTextBoxColumn.Name = "typeTextDataGridViewTextBoxColumn";
+            this.typeTextDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // wareHouseIdDataGridViewTextBoxColumn
+            // 
+            this.wareHouseIdDataGridViewTextBoxColumn.DataPropertyName = "WareHouseId";
+            this.wareHouseIdDataGridViewTextBoxColumn.HeaderText = "창고 번호";
+            this.wareHouseIdDataGridViewTextBoxColumn.Name = "wareHouseIdDataGridViewTextBoxColumn";
+            this.wareHouseIdDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // TransactionStock
             // 
@@ -171,6 +177,7 @@ namespace MesUI
         private System.Windows.Forms.Button btnModify;
         private System.Windows.Forms.DataGridView rscTransactionGrid;
         private System.Windows.Forms.BindingSource bdsTransaction;
+        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn resourceIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn sellerNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
@@ -178,6 +185,5 @@ namespace MesUI
         private System.Windows.Forms.DataGridViewTextBoxColumn employeeIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn typeTextDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn wareHouseIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

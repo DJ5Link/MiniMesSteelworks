@@ -80,6 +80,7 @@
     <Compile Include="MaterialOrderManagement.Designer.cs">
       <DependentUpon>MaterialOrderManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="MesRegEx.cs" />
     <Compile Include="OrderAdd.cs">
       <SubType>Form</SubType>
     </Compile>

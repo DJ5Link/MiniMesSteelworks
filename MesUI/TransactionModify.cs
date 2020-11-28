@@ -66,6 +66,25 @@ namespace MesUI
 
             this.Hide();
         }
+
+        private void textBoxEmployeeId_Leave(object sender, EventArgs e)
+        {
+            //MessageBox.Show("포커스 아웃");
+            if (!MesRegEx.IsNumber(textBoxEmployeeId.Text))
+            {
+                MessageBox.Show("숫자만 입력 가능합니다", "입력 데이터 오류");
+                textBoxEmployeeId.Focus();
+            }
+        }
+
+        private void textBoxWareHouseId_Leave(object sender, EventArgs e)
+        {
+            if (!MesRegEx.IsNumber(textBoxWareHouseId.Text))
+            {
+                MessageBox.Show("숫자만 입력 가능합니다", "입력 데이터 오류");
+                textBoxWareHouseId.Focus();
+            }
+        }
     }
 
 }

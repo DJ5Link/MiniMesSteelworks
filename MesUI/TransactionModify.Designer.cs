@@ -97,9 +97,9 @@ namespace MesUI
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(23, 136);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(41, 12);
+            this.label5.Size = new System.Drawing.Size(56, 12);
             this.label5.TabIndex = 1;
-            this.label5.Text = "담당자";
+            this.label5.Text = "담당자 ID";
             // 
             // label6
             // 
@@ -115,9 +115,9 @@ namespace MesUI
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(23, 190);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(44, 12);
+            this.label7.Size = new System.Drawing.Size(57, 12);
             this.label7.TabIndex = 1;
-            this.label7.Text = "창고 ID";
+            this.label7.Text = "창고 번호";
             // 
             // textBoxId
             // 
@@ -155,6 +155,7 @@ namespace MesUI
             this.textBoxEmployeeId.Name = "textBoxEmployeeId";
             this.textBoxEmployeeId.Size = new System.Drawing.Size(184, 21);
             this.textBoxEmployeeId.TabIndex = 2;
+            this.textBoxEmployeeId.Leave += new System.EventHandler(this.textBoxEmployeeId_Leave);
             // 
             // textBoxType
             // 
@@ -170,6 +171,7 @@ namespace MesUI
             this.textBoxWareHouseId.Name = "textBoxWareHouseId";
             this.textBoxWareHouseId.Size = new System.Drawing.Size(184, 21);
             this.textBoxWareHouseId.TabIndex = 2;
+            this.textBoxWareHouseId.Leave += new System.EventHandler(this.textBoxWareHouseId_Leave);
             // 
             // TransactionModify
             // 
