@@ -10,7 +10,7 @@ namespace MesUI
 {
     public class ResourceInfo
     {
-        public static List<Resource> rscList = null;
+        private static List<Resource> rscList = null;
 
         public static List<Resource> getInstance()
         {

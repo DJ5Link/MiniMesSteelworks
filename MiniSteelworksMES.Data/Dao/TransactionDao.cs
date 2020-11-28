@@ -31,7 +31,7 @@ namespace MiniSteelworksMES.Data
             using (var context = new MesEntities())
             {
                 var query = (from x in context.Transactions
-                            select x).OrderBy( x => x.Date).Skip(5).Take(5);
+                            select x).OrderBy( x => x.Date).Skip(skipCount).Take(skipCount);
 
                 return query.ToList();
             }

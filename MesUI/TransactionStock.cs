@@ -52,7 +52,7 @@ namespace MesUI
         {
             List<Transaction> list = null;
 
-            if (checkBoxDate.Checked && !checkBoxDate.Checked)
+            if (checkBoxDate.Checked && !checkBoxResourceId.Checked)
                 list = Dao.Transaction.GetByDate(dateTimePickerStart.Value, dateTimePickerEnd.Value);
             else if (checkBoxResourceId.Checked && checkBoxDate.Checked)
                 list = Dao.Transaction.GetByResourceIdAndDate(dictResource[comboBoxRscId.Text], dateTimePickerStart.Value, dateTimePickerEnd.Value);
@@ -61,7 +61,7 @@ namespace MesUI
             else
             {
                 //list = Dao.Transaction.GetAll();
-                list = Dao.Transaction.GetAllByPagingQuery();
+                list = Dao.Transaction.GetAllByPagingQuery(20);
             }
 
             bdsTransaction.DataSource = list;
