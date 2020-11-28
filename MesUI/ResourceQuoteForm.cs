@@ -77,7 +77,10 @@ namespace MesUI
 
         private void PeriodSearch_Click(object sender, EventArgs e)
         {
-            List<Resource_Quote> list = Dao.Resource_Quote.GetByDate(uiDt_StartTime.Value, uiDt_EndTime.Value);
+            DateTime dt1 = this.uiDt_StartTime.Value.Date;
+            DateTime dt2 = this.uiDt_EndTime.Value.Date;
+
+            List<Resource_Quote> list = Dao.Resource_Quote.GetByDate(dt1, dt2);
 
             if (uiDt_StartTime.Value > uiDt_EndTime.Value)
             {
