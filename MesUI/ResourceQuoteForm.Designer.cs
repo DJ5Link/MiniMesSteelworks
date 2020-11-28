@@ -36,7 +36,7 @@ namespace MesUI
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            this.button1 = new System.Windows.Forms.Button();
+            this.PeriodSerch = new System.Windows.Forms.Button();
             this.uiDt_EndTime = new System.Windows.Forms.DateTimePicker();
             this.uiDt_StartTime = new System.Windows.Forms.DateTimePicker();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -56,6 +56,7 @@ namespace MesUI
             this.transactionBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.Reset = new System.Windows.Forms.Button();
             this.resourceQuoteFormBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.resourceQuoteBindingSource)).BeginInit();
@@ -66,38 +67,39 @@ namespace MesUI
             ((System.ComponentModel.ISupportInitialize)(this.resourceQuoteFormBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // PeriodSerch
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(570, 121);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(82, 32);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "조회";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.PeriodSerch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.PeriodSerch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PeriodSerch.Location = new System.Drawing.Point(570, 121);
+            this.PeriodSerch.Name = "PeriodSerch";
+            this.PeriodSerch.Size = new System.Drawing.Size(82, 32);
+            this.PeriodSerch.TabIndex = 15;
+            this.PeriodSerch.Text = "조회";
+            this.PeriodSerch.UseVisualStyleBackColor = true;
+            this.PeriodSerch.Click += new System.EventHandler(this.PeriodSearch_Click);
             // 
             // uiDt_EndTime
             // 
             this.uiDt_EndTime.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.uiDt_EndTime.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiDt_EndTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.uiDt_EndTime.Location = new System.Drawing.Point(562, 94);
             this.uiDt_EndTime.Name = "uiDt_EndTime";
             this.uiDt_EndTime.Size = new System.Drawing.Size(98, 21);
             this.uiDt_EndTime.TabIndex = 14;
-            this.uiDt_EndTime.ValueChanged += new System.EventHandler(this.uiDt_EndTime_ValueChanged);
             // 
             // uiDt_StartTime
             // 
             this.uiDt_StartTime.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.uiDt_StartTime.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiDt_StartTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.uiDt_StartTime.Location = new System.Drawing.Point(562, 41);
             this.uiDt_StartTime.Name = "uiDt_StartTime";
             this.uiDt_StartTime.Size = new System.Drawing.Size(98, 21);
             this.uiDt_StartTime.TabIndex = 13;
-            this.uiDt_StartTime.ValueChanged += new System.EventHandler(this.uiDt_StartTime_ValueChanged);
             // 
             // dataGridView1
             // 
@@ -165,7 +167,7 @@ namespace MesUI
             this.checkBox4.Checked = true;
             this.checkBox4.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.checkBox4.Location = new System.Drawing.Point(562, 444);
+            this.checkBox4.Location = new System.Drawing.Point(562, 418);
             this.checkBox4.Name = "checkBox4";
             this.checkBox4.Size = new System.Drawing.Size(48, 16);
             this.checkBox4.TabIndex = 8;
@@ -179,7 +181,7 @@ namespace MesUI
             this.checkBox3.Checked = true;
             this.checkBox3.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.checkBox3.Location = new System.Drawing.Point(562, 422);
+            this.checkBox3.Location = new System.Drawing.Point(562, 396);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(72, 16);
             this.checkBox3.TabIndex = 9;
@@ -193,7 +195,7 @@ namespace MesUI
             this.checkBox2.Checked = true;
             this.checkBox2.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.checkBox2.Location = new System.Drawing.Point(562, 400);
+            this.checkBox2.Location = new System.Drawing.Point(562, 374);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(48, 16);
             this.checkBox2.TabIndex = 10;
@@ -207,7 +209,7 @@ namespace MesUI
             this.checkBox1.Checked = true;
             this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.checkBox1.Location = new System.Drawing.Point(562, 378);
+            this.checkBox1.Location = new System.Drawing.Point(562, 352);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(60, 16);
             this.checkBox1.TabIndex = 11;
@@ -315,6 +317,18 @@ namespace MesUI
             this.label2.TabIndex = 16;
             this.label2.Text = "종료날짜";
             // 
+            // Reset
+            // 
+            this.Reset.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Reset.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Reset.Location = new System.Drawing.Point(570, 467);
+            this.Reset.Name = "Reset";
+            this.Reset.Size = new System.Drawing.Size(82, 33);
+            this.Reset.TabIndex = 17;
+            this.Reset.Text = "초기화면";
+            this.Reset.UseVisualStyleBackColor = true;
+            this.Reset.Click += new System.EventHandler(this.Reset_Click);
+            // 
             // resourceQuoteFormBindingSource
             // 
             this.resourceQuoteFormBindingSource.DataSource = typeof(MesUI.ResourceQuoteForm);
@@ -324,9 +338,10 @@ namespace MesUI
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1081, 530);
+            this.Controls.Add(this.Reset);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.PeriodSerch);
             this.Controls.Add(this.uiDt_EndTime);
             this.Controls.Add(this.uiDt_StartTime);
             this.Controls.Add(this.dataGridView1);
@@ -351,7 +366,7 @@ namespace MesUI
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button PeriodSerch;
         private System.Windows.Forms.DateTimePicker uiDt_EndTime;
         private System.Windows.Forms.DateTimePicker uiDt_StartTime;
         private System.Windows.Forms.DataGridView dataGridView1;
@@ -372,5 +387,6 @@ namespace MesUI
         private System.Windows.Forms.DataGridViewTextBoxColumn copperQuoteDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button Reset;
     }
 }

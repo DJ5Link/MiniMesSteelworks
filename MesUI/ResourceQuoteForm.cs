@@ -16,13 +16,34 @@ namespace MesUI
     {
         public ResourceQuoteForm()
         {
+            load();
+        }
+
+        private void Reset_Click(object sender, EventArgs e)
+        {
+            this.Controls.Clear();
+            load();
+            DisplayQuote();
+        }
+        public void load()
+        {
             InitializeComponent();
             checkBox1.CheckedChanged += checkBox_CheckedChanged;
             checkBox2.CheckedChanged += checkBox_CheckedChanged;
             checkBox3.CheckedChanged += checkBox_CheckedChanged;
             checkBox4.CheckedChanged += checkBox_CheckedChanged;
-            SetGridLayout();
 
+        }
+
+        private void ResourceQuoteForm_Load(object sender, EventArgs e)
+        {
+            DisplayQuote();
+        }
+
+        public void DisplayQuote()
+        {
+            List<Resource_Quote> list = Dao.Resource_Quote.GetAll();
+            resourceQuoteBindingSource.DataSource = list;
         }
 
         private void checkBox_CheckedChanged(object sender, EventArgs e)
@@ -39,36 +60,10 @@ namespace MesUI
                 { chart1.Series[i].Enabled = true; }
                 else
                 { chart1.Series[i].Enabled = false; }
-            } 
+            }
         }
 
-        private void ResourceQuoteForm_Load(object sender, EventArgs e)
-        {
-            DisplayQuote();
-        }
-
-        private void SetGridLayout()
-        {
-            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-        }
-
-        public void DisplayQuote()
-        {
-            List<Resource_Quote> list = Dao.Resource_Quote.GetAll();
-            resourceQuoteBindingSource.DataSource = list;
-        }
-
-        private void uiDt_StartTime_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void uiDt_EndTime_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void PeriodSearch_Click(object sender, EventArgs e)
         {
             List<Resource_Quote> list = Dao.Resource_Quote.GetByDate(uiDt_StartTime.Value, uiDt_EndTime.Value);
 
@@ -76,15 +71,17 @@ namespace MesUI
             {
                 MessageBox.Show("제대로 검색해라 바보야", "오류");
             }
+
             for (int i = 0; i < chart1.Series.Count; i++)
             {
-                chart1.Series[i].Enabled = true;
                 chart1.Series[i].XValueMember = "date";
             }
-            
+
             chart1.ChartAreas[0].AxisX.Interval = 1;
 
             resourceQuoteBindingSource.DataSource = list;
+
         }
+
     }
 }
