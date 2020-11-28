@@ -26,6 +26,20 @@ namespace MiniSteelworksMES.Data
             }
         }
 
+        public List<Transaction> GetByDate(DateTime start, DateTime end)
+        {
+            using (var context = new MesEntities())
+            {
+                var query = from x in context.Transactions
+                            where x.Date >= start && x.Date <= end
+                            select x;
+
+                List<Transaction> list = query.ToList();
+
+                return query.ToList();
+            }
+        }
+
         public void UpdateTransaction(List<string> list)
         {
             int id = Convert.ToInt32(list[0]);

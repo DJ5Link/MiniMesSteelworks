@@ -34,7 +34,13 @@ namespace MesUI
         private void btnSearch_Click(object sender, EventArgs e)
         {
 
-            List<Transaction> list = Dao.Transaction.GetAll();
+            List<Transaction> list = Dao.Transaction.GetByDate(dateTimePickerStart.Value, dateTimePickerEnd.Value);
+
+            if(list.Count == 0)
+            {
+                MessageBox.Show("0건 조회 되었습니다", "조회 결과");
+            }
+
             bdsTransaction.DataSource = list;
 
                 //foreach (var x in list)

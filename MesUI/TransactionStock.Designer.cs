@@ -33,8 +33,6 @@ namespace MesUI
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnModify = new System.Windows.Forms.Button();
             this.rscTransactionGrid = new System.Windows.Forms.DataGridView();
-            this.bdsTransaction = new System.Windows.Forms.BindingSource(this.components);
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.resourceIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sellerNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,14 +40,20 @@ namespace MesUI
             this.employeeIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.typeTextDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.wareHouseIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bdsTransaction = new System.Windows.Forms.BindingSource(this.components);
+            this.dateTimePickerStart = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerEnd = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.rscTransactionGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsTransaction)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(0, 11);
+            this.btnSearch.Location = new System.Drawing.Point(536, 14);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
             this.btnSearch.TabIndex = 0;
@@ -59,7 +63,7 @@ namespace MesUI
             // 
             // btnModify
             // 
-            this.btnModify.Location = new System.Drawing.Point(81, 11);
+            this.btnModify.Location = new System.Drawing.Point(617, 14);
             this.btnModify.Name = "btnModify";
             this.btnModify.Size = new System.Drawing.Size(75, 23);
             this.btnModify.TabIndex = 1;
@@ -87,23 +91,9 @@ namespace MesUI
             this.rscTransactionGrid.Name = "rscTransactionGrid";
             this.rscTransactionGrid.ReadOnly = true;
             this.rscTransactionGrid.RowTemplate.Height = 23;
-            this.rscTransactionGrid.Size = new System.Drawing.Size(941, 519);
+            this.rscTransactionGrid.Size = new System.Drawing.Size(941, 514);
             this.rscTransactionGrid.TabIndex = 3;
             this.rscTransactionGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.rscTransactionGrid_CellContentClick);
-            // 
-            // bdsTransaction
-            // 
-            this.bdsTransaction.DataSource = typeof(MiniSteelworksMES.Data.Transaction);
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.btnSearch);
-            this.groupBox1.Controls.Add(this.btnModify);
-            this.groupBox1.Location = new System.Drawing.Point(734, 520);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(162, 40);
-            this.groupBox1.TabIndex = 4;
-            this.groupBox1.TabStop = false;
             // 
             // resourceIdDataGridViewTextBoxColumn
             // 
@@ -154,19 +144,71 @@ namespace MesUI
             this.wareHouseIdDataGridViewTextBoxColumn.Name = "wareHouseIdDataGridViewTextBoxColumn";
             this.wareHouseIdDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // bdsTransaction
+            // 
+            this.bdsTransaction.DataSource = typeof(MiniSteelworksMES.Data.Transaction);
+            // 
+            // dateTimePickerStart
+            // 
+            this.dateTimePickerStart.Location = new System.Drawing.Point(64, 14);
+            this.dateTimePickerStart.Name = "dateTimePickerStart";
+            this.dateTimePickerStart.Size = new System.Drawing.Size(200, 21);
+            this.dateTimePickerStart.TabIndex = 5;
+            // 
+            // dateTimePickerEnd
+            // 
+            this.dateTimePickerEnd.Location = new System.Drawing.Point(329, 14);
+            this.dateTimePickerEnd.Name = "dateTimePickerEnd";
+            this.dateTimePickerEnd.Size = new System.Drawing.Size(200, 21);
+            this.dateTimePickerEnd.TabIndex = 5;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(5, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(53, 12);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "시작날짜";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(270, 20);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(53, 12);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "종료날짜";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.btnSearch);
+            this.groupBox2.Controls.Add(this.dateTimePickerStart);
+            this.groupBox2.Controls.Add(this.btnModify);
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.dateTimePickerEnd);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.groupBox2.Location = new System.Drawing.Point(243, 514);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(698, 80);
+            this.groupBox2.TabIndex = 7;
+            this.groupBox2.TabStop = false;
+            // 
             // TransactionStock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(941, 594);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.rscTransactionGrid);
             this.Name = "TransactionStock";
             this.Text = "원자재 재고 입출고 조회";
             this.Load += new System.EventHandler(this.TransactionStock_Load);
             ((System.ComponentModel.ISupportInitialize)(this.rscTransactionGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsTransaction)).EndInit();
-            this.groupBox1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -177,7 +219,6 @@ namespace MesUI
         private System.Windows.Forms.Button btnModify;
         private System.Windows.Forms.DataGridView rscTransactionGrid;
         private System.Windows.Forms.BindingSource bdsTransaction;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn resourceIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn sellerNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
@@ -185,5 +226,10 @@ namespace MesUI
         private System.Windows.Forms.DataGridViewTextBoxColumn employeeIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn typeTextDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn wareHouseIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DateTimePicker dateTimePickerStart;
+        private System.Windows.Forms.DateTimePicker dateTimePickerEnd;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }
