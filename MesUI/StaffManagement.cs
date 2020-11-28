@@ -14,6 +14,8 @@ namespace MesUI
 {
     public partial class StaffManagement : Form
     {
+        private List<TextBox> textboxList = new List<TextBox>();
+
         public StaffManagement()
         {
             InitializeComponent();
@@ -26,6 +28,15 @@ namespace MesUI
         /// <param name="e"></param>
         private void StaffManagement_Load(object sender, EventArgs e)
         {
+            textboxList.Add(textboxStaffId);
+            textboxList.Add(textboxStaffName);
+            textboxList.Add(textboxStaffPosition);
+            textboxList.Add(textboxBossId);
+            textboxList.Add(textboxAddress);
+            textboxList.Add(textboxPhoneNumber);
+            textboxList.Add(textboxTeamName);
+            textboxList.Add(textboxPassword);
+
             AddTeamNames();
         }
 
@@ -110,25 +121,18 @@ namespace MesUI
 
         private void treeViewEmployee_NodeMouseDoubleClick(object sender, TreeNodeMouseClickEventArgs e)
         {
-            List<Employee> list = Dao.Employee.GetByPK(Convert.ToInt32(((string)e.Node.Tag)));
-
-            if (list.Count ==1 )
-            {
-                textboxstaffId.Text = list[0].EmployeeId.ToString();
-                textboxStaffName.Text = list[0].Name;
-                textboxStaffPosition.Text = list[0].Position;
-                textboxPhoneNumber.Text = list[0].PhoneNumber;
-                textboxAddress.Text = list[0].Address;
-            }
+            
         }
 
         private void buttonStaffSearch_Click(object sender, EventArgs e)
         {
+            textboxStaffId.Enabled = false;
+
             List<Employee> list = Dao.Employee.GetByPK( Convert.ToInt32(textBoxEmployeeId.Text ));
 
             if (list.Count == 1)
             {
-                textboxstaffId.Text = list[0].EmployeeId.ToString();
+                textboxStaffId.Text = list[0].EmployeeId.ToString();
                 textboxStaffName.Text = list[0].Name;
                 textboxStaffPosition.Text = list[0].Position;
                 textboxPhoneNumber.Text = list[0].PhoneNumber;
@@ -165,11 +169,71 @@ namespace MesUI
 
         private void textboxAddress_Leave(object sender, EventArgs e)
         {
-            if (MesRegEx.HasNumber(textboxAddress.Text))
+            
+        }
+
+        private void buttonModifyEmployee_Click(object sender, EventArgs e)
+        {
+            List<string> list = new List<string>();
+
+            foreach (var x in textboxList)
             {
-                MessageBox.Show("문자만 입력 가능합니다", "입력 데이터 오류");
-                textboxAddress.Focus();
+                list.Add( x.Text );
             }
+
+            Dao.Employee.UpdateEmployee(list);
+
+            treeViewEmployee.Nodes.Clear();
+            AddTeamNames();
+
+        }
+
+        private void buttonRegisterEmployee_Click(object sender, EventArgs e)
+        {
+            List<Employee> list = Dao.Employee.GetAll();
+
+            foreach (var x in textboxList)
+            {
+                x.Text = "";
+            }
+
+            textboxStaffId.Text = (list.Count()+1).ToString();
+        }
+
+        private void buttonAddNewEmployee_Click(object sender, EventArgs e)
+        {
+            List<string> list = new List<string>();
+
+            foreach (var x in textboxList)
+            {
+                list.Add(x.Text);
+            }
+            Dao.Employee.InsertEmployee(list);
+
+            treeViewEmployee.Nodes.Clear();
+            AddTeamNames();
+        }
+
+        private void treeViewEmployee_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
+        {
+            List<Employee> list = Dao.Employee.GetByPK(Convert.ToInt32(((string)e.Node.Tag)));
+
+            if (list.Count == 1)
+            {
+                textboxStaffId.Text = list[0].EmployeeId.ToString();
+                textboxStaffName.Text = list[0].Name;
+                textboxStaffPosition.Text = list[0].Position;
+                textboxBossId.Text = list[0].BossId.ToString();
+                textboxPhoneNumber.Text = list[0].PhoneNumber;
+                textboxTeamName.Text = list[0].Team;
+                textboxPassword.Text = list[0].Password;
+                textboxAddress.Text = list[0].Address;
+            }
+
+            if( ((string)e.Node.Tag) == "1") // 사장이면 수정 못하게 처리함
+                buttonModifyEmployee.Enabled = false;
+            else
+                buttonModifyEmployee.Enabled = true;
         }
     }
 }
