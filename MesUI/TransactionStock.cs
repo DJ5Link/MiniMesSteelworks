@@ -84,7 +84,7 @@ namespace MesUI
                 list = Dao.Transaction.GetByResourceId(dictResource[comboBoxRscId.Text]);
             else
             { // 조건 없이 모두 조회한다, 페이징 처리를 해야 한다
-                pageCount = Dao.Transaction.GetAllByPageCount(rowsCountPerPage);
+                pageCount = Dao.Transaction.GetPageCount(rowsCountPerPage);
 
                 for(int i=1; i<=pageCount; i++)
                     comboBoxPageNumber.Items.Add(i.ToString());

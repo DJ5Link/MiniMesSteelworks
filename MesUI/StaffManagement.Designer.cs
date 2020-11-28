@@ -29,11 +29,7 @@ namespace MesUI
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("경영팀");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("인사팀");
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("물류팀");
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("생산팀");
-            this.treeView1 = new System.Windows.Forms.TreeView();
+            this.treeViewEmployee = new System.Windows.Forms.TreeView();
             this.StaffSearchButton = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.StaffInfoButton = new System.Windows.Forms.Button();
@@ -50,26 +46,14 @@ namespace MesUI
             this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // treeView1
+            // treeViewEmployee
             // 
-            this.treeView1.Font = new System.Drawing.Font("HY수평선B", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.treeView1.Location = new System.Drawing.Point(12, 12);
-            this.treeView1.Name = "treeView1";
-            treeNode1.Name = "경영팀";
-            treeNode1.Text = "경영팀";
-            treeNode2.Name = "인사팀";
-            treeNode2.Text = "인사팀";
-            treeNode3.Name = "물류팀";
-            treeNode3.Text = "물류팀";
-            treeNode4.Name = "생산팀";
-            treeNode4.Text = "생산팀";
-            this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2,
-            treeNode3,
-            treeNode4});
-            this.treeView1.Size = new System.Drawing.Size(235, 235);
-            this.treeView1.TabIndex = 0;
+            this.treeViewEmployee.Font = new System.Drawing.Font("HYsupB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.treeViewEmployee.Location = new System.Drawing.Point(12, 12);
+            this.treeViewEmployee.Name = "treeViewEmployee";
+            this.treeViewEmployee.Size = new System.Drawing.Size(235, 235);
+            this.treeViewEmployee.TabIndex = 0;
+            this.treeViewEmployee.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewEmployee_AfterSelect);
             // 
             // StaffSearchButton
             // 
@@ -211,7 +195,7 @@ namespace MesUI
             this.Controls.Add(this.StaffInfoButton);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.StaffSearchButton);
-            this.Controls.Add(this.treeView1);
+            this.Controls.Add(this.treeViewEmployee);
             this.Name = "StaffManagement";
             this.Text = "StaffManagement";
             this.Load += new System.EventHandler(this.StaffManagement_Load);
@@ -222,7 +206,7 @@ namespace MesUI
 
         #endregion
 
-        private System.Windows.Forms.TreeView treeView1;
+        private System.Windows.Forms.TreeView treeViewEmployee;
         private System.Windows.Forms.Button StaffSearchButton;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button StaffInfoButton;

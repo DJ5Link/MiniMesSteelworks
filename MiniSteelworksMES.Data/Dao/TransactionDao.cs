@@ -46,7 +46,7 @@ namespace MiniSteelworksMES.Data
             }
         }
 
-        public int GetAllByPageCount(int skipCount)
+        public int GetPageCount(int skipCount)
         {
             using (var context = new MesEntities())
             {
@@ -69,8 +69,6 @@ namespace MiniSteelworksMES.Data
                 var query = from x in context.Transactions
                             where x.Date >= start && x.Date <= end
                             select x;
-
-                List<Transaction> list = query.ToList();
 
                 return query.ToList();
             }

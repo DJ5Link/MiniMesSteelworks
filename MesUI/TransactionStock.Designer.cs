@@ -58,7 +58,7 @@ namespace MesUI
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(767, 6);
+            this.btnSearch.Location = new System.Drawing.Point(744, 18);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
             this.btnSearch.TabIndex = 0;
@@ -68,7 +68,7 @@ namespace MesUI
             // 
             // btnModify
             // 
-            this.btnModify.Location = new System.Drawing.Point(848, 6);
+            this.btnModify.Location = new System.Drawing.Point(825, 18);
             this.btnModify.Name = "btnModify";
             this.btnModify.Size = new System.Drawing.Size(75, 23);
             this.btnModify.TabIndex = 1;
@@ -102,14 +102,14 @@ namespace MesUI
             // 
             // dateTimePickerStart
             // 
-            this.dateTimePickerStart.Location = new System.Drawing.Point(295, 6);
+            this.dateTimePickerStart.Location = new System.Drawing.Point(272, 18);
             this.dateTimePickerStart.Name = "dateTimePickerStart";
             this.dateTimePickerStart.Size = new System.Drawing.Size(200, 21);
             this.dateTimePickerStart.TabIndex = 5;
             // 
             // dateTimePickerEnd
             // 
-            this.dateTimePickerEnd.Location = new System.Drawing.Point(560, 6);
+            this.dateTimePickerEnd.Location = new System.Drawing.Point(537, 18);
             this.dateTimePickerEnd.Name = "dateTimePickerEnd";
             this.dateTimePickerEnd.Size = new System.Drawing.Size(200, 21);
             this.dateTimePickerEnd.TabIndex = 5;
@@ -117,7 +117,7 @@ namespace MesUI
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(236, 9);
+            this.label1.Location = new System.Drawing.Point(213, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 12);
             this.label1.TabIndex = 6;
@@ -126,7 +126,7 @@ namespace MesUI
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(501, 12);
+            this.label2.Location = new System.Drawing.Point(478, 24);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 12);
             this.label2.TabIndex = 6;
@@ -145,17 +145,17 @@ namespace MesUI
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.dateTimePickerEnd);
             this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.groupBox2.Location = new System.Drawing.Point(12, 491);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupBox2.Location = new System.Drawing.Point(0, 491);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(929, 103);
+            this.groupBox2.Size = new System.Drawing.Size(941, 103);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             // 
             // checkBoxDate
             // 
             this.checkBoxDate.AutoSize = true;
-            this.checkBoxDate.Location = new System.Drawing.Point(29, 8);
+            this.checkBoxDate.Location = new System.Drawing.Point(6, 20);
             this.checkBoxDate.Name = "checkBoxDate";
             this.checkBoxDate.Size = new System.Drawing.Size(48, 16);
             this.checkBoxDate.TabIndex = 8;
@@ -165,7 +165,7 @@ namespace MesUI
             // checkBoxResourceId
             // 
             this.checkBoxResourceId.AutoSize = true;
-            this.checkBoxResourceId.Location = new System.Drawing.Point(29, 30);
+            this.checkBoxResourceId.Location = new System.Drawing.Point(6, 42);
             this.checkBoxResourceId.Name = "checkBoxResourceId";
             this.checkBoxResourceId.Size = new System.Drawing.Size(75, 16);
             this.checkBoxResourceId.TabIndex = 8;
@@ -175,7 +175,7 @@ namespace MesUI
             // labelPageNumber
             // 
             this.labelPageNumber.AutoSize = true;
-            this.labelPageNumber.Location = new System.Drawing.Point(255, 36);
+            this.labelPageNumber.Location = new System.Drawing.Point(232, 48);
             this.labelPageNumber.Name = "labelPageNumber";
             this.labelPageNumber.Size = new System.Drawing.Size(34, 12);
             this.labelPageNumber.TabIndex = 7;
@@ -186,7 +186,7 @@ namespace MesUI
             // comboBoxRscId
             // 
             this.comboBoxRscId.FormattingEnabled = true;
-            this.comboBoxRscId.Location = new System.Drawing.Point(110, 28);
+            this.comboBoxRscId.Location = new System.Drawing.Point(87, 40);
             this.comboBoxRscId.Name = "comboBoxRscId";
             this.comboBoxRscId.Size = new System.Drawing.Size(121, 20);
             this.comboBoxRscId.TabIndex = 9;
@@ -194,7 +194,7 @@ namespace MesUI
             // comboBoxPageNumber
             // 
             this.comboBoxPageNumber.FormattingEnabled = true;
-            this.comboBoxPageNumber.Location = new System.Drawing.Point(295, 33);
+            this.comboBoxPageNumber.Location = new System.Drawing.Point(272, 45);
             this.comboBoxPageNumber.Name = "comboBoxPageNumber";
             this.comboBoxPageNumber.Size = new System.Drawing.Size(121, 20);
             this.comboBoxPageNumber.TabIndex = 10;
@@ -261,7 +261,7 @@ namespace MesUI
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.rscTransactionGrid);
             this.Name = "TransactionStock";
-            this.Text = "원자재 재고 입출고 조회";
+            this.Text = "원자재 입출고 조회";
             this.Load += new System.EventHandler(this.TransactionStock_Load);
             ((System.ComponentModel.ISupportInitialize)(this.rscTransactionGrid)).EndInit();
             this.groupBox2.ResumeLayout(false);
