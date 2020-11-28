@@ -14,7 +14,6 @@ namespace MesUI
 {
     public partial class ResourceQuoteForm : Form
     {
-        //public DateTime d1, d2;
         public ResourceQuoteForm()
         {
             InitializeComponent();
@@ -28,25 +27,19 @@ namespace MesUI
 
         private void checkBox_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox1.Checked)
-            { chart1.Series[0].Enabled = true; }
-            else
-            { chart1.Series[0].Enabled = false; }
+            CheckBox[] boxes = new CheckBox[4];
+            boxes[0] = checkBox1;
+            boxes[1] = checkBox2;
+            boxes[2] = checkBox3;
+            boxes[3] = checkBox4;
 
-            if (checkBox2.Checked)
-            { chart1.Series[1].Enabled = true; }
-            else
-            { chart1.Series[1].Enabled = false; }
-
-            if (checkBox3.Checked)
-            { chart1.Series[2].Enabled = true; }
-            else
-            { chart1.Series[2].Enabled = false; }
-
-            if (checkBox4.Checked)
-            { chart1.Series[3].Enabled = true; }
-            else
-            { chart1.Series[3].Enabled = false; }
+            for (int i = 0; i < boxes.Length; i++)
+            {
+                if (boxes[i].Checked)
+                { chart1.Series[i].Enabled = true; }
+                else
+                { chart1.Series[i].Enabled = false; }
+            } 
         }
 
         private void ResourceQuoteForm_Load(object sender, EventArgs e)
@@ -83,6 +76,13 @@ namespace MesUI
             {
                 MessageBox.Show("제대로 검색해라 바보야", "오류");
             }
+            for (int i = 0; i < chart1.Series.Count; i++)
+            {
+                chart1.Series[i].Enabled = true;
+                chart1.Series[i].XValueMember = "date";
+            }
+            
+            chart1.ChartAreas[0].AxisX.Interval = 1;
 
             resourceQuoteBindingSource.DataSource = list;
         }
