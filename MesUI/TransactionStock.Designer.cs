@@ -97,6 +97,7 @@ namespace MesUI
             this.rscTransactionGrid.Location = new System.Drawing.Point(3, 17);
             this.rscTransactionGrid.Name = "rscTransactionGrid";
             this.rscTransactionGrid.ReadOnly = true;
+            this.rscTransactionGrid.RowHeadersVisible = false;
             this.rscTransactionGrid.RowTemplate.Height = 23;
             this.rscTransactionGrid.Size = new System.Drawing.Size(1300, 464);
             this.rscTransactionGrid.TabIndex = 3;
