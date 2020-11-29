@@ -72,9 +72,14 @@ namespace MesUI
         {
             List<Resource_Quote> list = Dao.Resource_Quote.GetByDate(uiDt_StartTime.Value.Date, uiDt_EndTime.Value.Date);
 
-            if (uiDt_StartTime.Value > uiDt_EndTime.Value)
+            if (uiDt_StartTime.Value.Date > uiDt_EndTime.Value.Date)
             {
                 MessageBox.Show("기간이 잘못되었음", "오류");
+            }
+
+            if (uiDt_StartTime.Value <= uiDt_EndTime.Value && list.Count == 0)
+            {
+                MessageBox.Show("조회 기간에 시세 데이터가 없습니다.");
             }
 
             for (int i = 0; i < chart1.Series.Count; i++)
@@ -94,7 +99,5 @@ namespace MesUI
             load();
             DisplayQuote();
         }
-
-
     }
 }

@@ -38,20 +38,6 @@ namespace MiniSteelworksMES.Data.Dao
 
                 return query.ToList();
             }
-            //public List<Resource_Quote> GetQuote(string id, DateTime d1, DateTime d2)
-            //{
-            //    using (var context = new MesEntities())
-            //    {
-            //        var query = from x in context.Resource_Quotes
-            //                    where DateTime.Compare(d1, x.date) >= 0
-            //                    && DateTime.Compare(d2, x.date) <= 0
-            //                    select x;
-
-            //        List<Resource_Quote> list = query.ToList();
-
-            //        return list;
-            //    }
-            //}
         }
     }
 }
