@@ -125,6 +125,7 @@ namespace MesUI
             this.Name = "LogInForm1";
             this.Text = "로그인 화면";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Shown += new System.EventHandler(this.LogInForm1_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.tealLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

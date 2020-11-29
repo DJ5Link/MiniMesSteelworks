@@ -198,6 +198,8 @@ namespace MesUI
             }
 
             textboxStaffId.Text = (list.Count()+1).ToString();
+
+            textboxStaffName.Focus();
         }
 
         private void buttonAddNewEmployee_Click(object sender, EventArgs e)

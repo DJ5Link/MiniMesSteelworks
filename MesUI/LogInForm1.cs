@@ -45,5 +45,15 @@ namespace MesUI
             ////LogInForm2 form1 = (LogInForm2)((Form1)(this.MdiParent)).dictForm["loginForm2"];
             //((Form1)(this.MdiParent)).ShowForm("loginForm2");
         }
+
+        private void LogInForm1_Activated(object sender, EventArgs e)
+        {
+            usrIdText.Focus();
+        }
+
+        private void LogInForm1_Shown(object sender, EventArgs e)
+        {
+            usrIdText.Focus();
+        }
     }
 }

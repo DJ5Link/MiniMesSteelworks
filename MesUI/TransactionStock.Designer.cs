@@ -99,7 +99,7 @@ namespace MesUI
             this.rscTransactionGrid.ReadOnly = true;
             this.rscTransactionGrid.RowHeadersVisible = false;
             this.rscTransactionGrid.RowTemplate.Height = 23;
-            this.rscTransactionGrid.Size = new System.Drawing.Size(1300, 464);
+            this.rscTransactionGrid.Size = new System.Drawing.Size(1300, 459);
             this.rscTransactionGrid.TabIndex = 3;
             this.rscTransactionGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.rscTransactionGrid_CellContentClick);
             // 
@@ -201,10 +201,9 @@ namespace MesUI
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.dateTimePickerEnd);
             this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox2.Location = new System.Drawing.Point(0, 510);
+            this.groupBox2.Location = new System.Drawing.Point(3, 489);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1306, 84);
+            this.groupBox2.Size = new System.Drawing.Size(1306, 79);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             // 
@@ -262,7 +261,7 @@ namespace MesUI
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1306, 484);
+            this.groupBox1.Size = new System.Drawing.Size(1306, 479);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             // 
