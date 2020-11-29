@@ -243,7 +243,7 @@ namespace MesUI
             this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(12, 12);
             this.chart1.Name = "chart1";
-            series1.BorderWidth = 4;
+            series1.BorderWidth = 2;
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series1.Legend = "Legend1";
@@ -251,7 +251,7 @@ namespace MesUI
             series1.Name = "철광석";
             series1.XValueMember = "date";
             series1.YValueMembers = "Iron_Ore_Quote";
-            series2.BorderWidth = 4;
+            series2.BorderWidth = 2;
             series2.ChartArea = "ChartArea1";
             series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series2.Legend = "Legend1";
@@ -259,7 +259,7 @@ namespace MesUI
             series2.Name = "니켈";
             series2.XValueMember = "date";
             series2.YValueMembers = "Nikel_Quote";
-            series3.BorderWidth = 4;
+            series3.BorderWidth = 2;
             series3.ChartArea = "ChartArea1";
             series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series3.Legend = "Legend1";
@@ -267,7 +267,7 @@ namespace MesUI
             series3.Name = "알루미늄";
             series3.XValueMember = "date";
             series3.YValueMembers = "Aluminum_Quote";
-            series4.BorderWidth = 4;
+            series4.BorderWidth = 2;
             series4.ChartArea = "ChartArea1";
             series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series4.Legend = "Legend1";
