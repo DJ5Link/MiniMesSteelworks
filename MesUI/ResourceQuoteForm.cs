@@ -85,6 +85,8 @@ namespace MesUI
             for (int i = 0; i < chart1.Series.Count; i++)
             {
                 chart1.Series[i].XValueMember = "date";
+                chart1.Series[i].MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
+                chart1.Series[i].MarkerSize = 10;
             }
 
             chart1.ChartAreas[0].AxisX.Interval = 1;
