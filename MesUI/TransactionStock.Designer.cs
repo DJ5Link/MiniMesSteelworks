@@ -33,16 +33,6 @@ namespace MesUI
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnModify = new System.Windows.Forms.Button();
             this.rscTransactionGrid = new System.Windows.Forms.DataGridView();
-            this.dateTimePickerStart = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePickerEnd = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.checkBoxDate = new System.Windows.Forms.CheckBox();
-            this.checkBoxResourceId = new System.Windows.Forms.CheckBox();
-            this.labelPageNumber = new System.Windows.Forms.Label();
-            this.comboBoxRscId = new System.Windows.Forms.ComboBox();
-            this.comboBoxPageNumber = new System.Windows.Forms.ComboBox();
             this.resourceIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sellerNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,9 +41,21 @@ namespace MesUI
             this.typeTextDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.wareHouseIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bdsTransaction = new System.Windows.Forms.BindingSource(this.components);
+            this.dateTimePickerStart = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerEnd = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.comboBoxPageNumber = new System.Windows.Forms.ComboBox();
+            this.checkBoxResourceId = new System.Windows.Forms.CheckBox();
+            this.comboBoxRscId = new System.Windows.Forms.ComboBox();
+            this.checkBoxDate = new System.Windows.Forms.CheckBox();
+            this.labelPageNumber = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.rscTransactionGrid)).BeginInit();
-            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bdsTransaction)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnSearch
@@ -91,114 +93,14 @@ namespace MesUI
             this.typeTextDataGridViewTextBoxColumn,
             this.wareHouseIdDataGridViewTextBoxColumn});
             this.rscTransactionGrid.DataSource = this.bdsTransaction;
-            this.rscTransactionGrid.Dock = System.Windows.Forms.DockStyle.Top;
-            this.rscTransactionGrid.Location = new System.Drawing.Point(0, 0);
+            this.rscTransactionGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rscTransactionGrid.Location = new System.Drawing.Point(3, 17);
             this.rscTransactionGrid.Name = "rscTransactionGrid";
             this.rscTransactionGrid.ReadOnly = true;
             this.rscTransactionGrid.RowTemplate.Height = 23;
-            this.rscTransactionGrid.Size = new System.Drawing.Size(941, 491);
+            this.rscTransactionGrid.Size = new System.Drawing.Size(1300, 464);
             this.rscTransactionGrid.TabIndex = 3;
             this.rscTransactionGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.rscTransactionGrid_CellContentClick);
-            // 
-            // dateTimePickerStart
-            // 
-            this.dateTimePickerStart.Location = new System.Drawing.Point(272, 18);
-            this.dateTimePickerStart.Name = "dateTimePickerStart";
-            this.dateTimePickerStart.Size = new System.Drawing.Size(200, 21);
-            this.dateTimePickerStart.TabIndex = 5;
-            // 
-            // dateTimePickerEnd
-            // 
-            this.dateTimePickerEnd.Location = new System.Drawing.Point(537, 18);
-            this.dateTimePickerEnd.Name = "dateTimePickerEnd";
-            this.dateTimePickerEnd.Size = new System.Drawing.Size(200, 21);
-            this.dateTimePickerEnd.TabIndex = 5;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(213, 21);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 12);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "시작날짜";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(478, 24);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 12);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "종료날짜";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.comboBoxPageNumber);
-            this.groupBox2.Controls.Add(this.checkBoxResourceId);
-            this.groupBox2.Controls.Add(this.comboBoxRscId);
-            this.groupBox2.Controls.Add(this.checkBoxDate);
-            this.groupBox2.Controls.Add(this.labelPageNumber);
-            this.groupBox2.Controls.Add(this.btnSearch);
-            this.groupBox2.Controls.Add(this.dateTimePickerStart);
-            this.groupBox2.Controls.Add(this.btnModify);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.dateTimePickerEnd);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox2.Location = new System.Drawing.Point(0, 491);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(941, 103);
-            this.groupBox2.TabIndex = 7;
-            this.groupBox2.TabStop = false;
-            // 
-            // checkBoxDate
-            // 
-            this.checkBoxDate.AutoSize = true;
-            this.checkBoxDate.Location = new System.Drawing.Point(6, 20);
-            this.checkBoxDate.Name = "checkBoxDate";
-            this.checkBoxDate.Size = new System.Drawing.Size(48, 16);
-            this.checkBoxDate.TabIndex = 8;
-            this.checkBoxDate.Text = "기간";
-            this.checkBoxDate.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxResourceId
-            // 
-            this.checkBoxResourceId.AutoSize = true;
-            this.checkBoxResourceId.Location = new System.Drawing.Point(6, 42);
-            this.checkBoxResourceId.Name = "checkBoxResourceId";
-            this.checkBoxResourceId.Size = new System.Drawing.Size(75, 16);
-            this.checkBoxResourceId.TabIndex = 8;
-            this.checkBoxResourceId.Text = "원자재 ID";
-            this.checkBoxResourceId.UseVisualStyleBackColor = true;
-            // 
-            // labelPageNumber
-            // 
-            this.labelPageNumber.AutoSize = true;
-            this.labelPageNumber.Location = new System.Drawing.Point(232, 48);
-            this.labelPageNumber.Name = "labelPageNumber";
-            this.labelPageNumber.Size = new System.Drawing.Size(34, 12);
-            this.labelPageNumber.TabIndex = 7;
-            this.labelPageNumber.Text = "Page";
-            this.labelPageNumber.MouseLeave += new System.EventHandler(this.labelPage1_MouseLeave);
-            this.labelPageNumber.MouseHover += new System.EventHandler(this.labelPage1_MouseHover);
-            // 
-            // comboBoxRscId
-            // 
-            this.comboBoxRscId.FormattingEnabled = true;
-            this.comboBoxRscId.Location = new System.Drawing.Point(87, 40);
-            this.comboBoxRscId.Name = "comboBoxRscId";
-            this.comboBoxRscId.Size = new System.Drawing.Size(121, 20);
-            this.comboBoxRscId.TabIndex = 9;
-            // 
-            // comboBoxPageNumber
-            // 
-            this.comboBoxPageNumber.FormattingEnabled = true;
-            this.comboBoxPageNumber.Location = new System.Drawing.Point(272, 45);
-            this.comboBoxPageNumber.Name = "comboBoxPageNumber";
-            this.comboBoxPageNumber.Size = new System.Drawing.Size(121, 20);
-            this.comboBoxPageNumber.TabIndex = 10;
-            this.comboBoxPageNumber.SelectedIndexChanged += new System.EventHandler(this.comboBoxPageNumber_SelectedIndexChanged);
             // 
             // resourceIdDataGridViewTextBoxColumn
             // 
@@ -253,20 +155,131 @@ namespace MesUI
             // 
             this.bdsTransaction.DataSource = typeof(MiniSteelworksMES.Data.Transaction);
             // 
+            // dateTimePickerStart
+            // 
+            this.dateTimePickerStart.Location = new System.Drawing.Point(272, 18);
+            this.dateTimePickerStart.Name = "dateTimePickerStart";
+            this.dateTimePickerStart.Size = new System.Drawing.Size(200, 21);
+            this.dateTimePickerStart.TabIndex = 5;
+            // 
+            // dateTimePickerEnd
+            // 
+            this.dateTimePickerEnd.Location = new System.Drawing.Point(537, 18);
+            this.dateTimePickerEnd.Name = "dateTimePickerEnd";
+            this.dateTimePickerEnd.Size = new System.Drawing.Size(200, 21);
+            this.dateTimePickerEnd.TabIndex = 5;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(213, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(53, 12);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "시작날짜";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(478, 24);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(53, 12);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "종료날짜";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.comboBoxPageNumber);
+            this.groupBox2.Controls.Add(this.checkBoxResourceId);
+            this.groupBox2.Controls.Add(this.comboBoxRscId);
+            this.groupBox2.Controls.Add(this.checkBoxDate);
+            this.groupBox2.Controls.Add(this.labelPageNumber);
+            this.groupBox2.Controls.Add(this.btnSearch);
+            this.groupBox2.Controls.Add(this.dateTimePickerStart);
+            this.groupBox2.Controls.Add(this.btnModify);
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.dateTimePickerEnd);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupBox2.Location = new System.Drawing.Point(0, 510);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(1306, 84);
+            this.groupBox2.TabIndex = 7;
+            this.groupBox2.TabStop = false;
+            // 
+            // comboBoxPageNumber
+            // 
+            this.comboBoxPageNumber.FormattingEnabled = true;
+            this.comboBoxPageNumber.Location = new System.Drawing.Point(272, 45);
+            this.comboBoxPageNumber.Name = "comboBoxPageNumber";
+            this.comboBoxPageNumber.Size = new System.Drawing.Size(121, 20);
+            this.comboBoxPageNumber.TabIndex = 10;
+            this.comboBoxPageNumber.SelectedIndexChanged += new System.EventHandler(this.comboBoxPageNumber_SelectedIndexChanged);
+            // 
+            // checkBoxResourceId
+            // 
+            this.checkBoxResourceId.AutoSize = true;
+            this.checkBoxResourceId.Location = new System.Drawing.Point(6, 42);
+            this.checkBoxResourceId.Name = "checkBoxResourceId";
+            this.checkBoxResourceId.Size = new System.Drawing.Size(75, 16);
+            this.checkBoxResourceId.TabIndex = 8;
+            this.checkBoxResourceId.Text = "원자재 ID";
+            this.checkBoxResourceId.UseVisualStyleBackColor = true;
+            // 
+            // comboBoxRscId
+            // 
+            this.comboBoxRscId.FormattingEnabled = true;
+            this.comboBoxRscId.Location = new System.Drawing.Point(87, 40);
+            this.comboBoxRscId.Name = "comboBoxRscId";
+            this.comboBoxRscId.Size = new System.Drawing.Size(121, 20);
+            this.comboBoxRscId.TabIndex = 9;
+            // 
+            // checkBoxDate
+            // 
+            this.checkBoxDate.AutoSize = true;
+            this.checkBoxDate.Location = new System.Drawing.Point(6, 20);
+            this.checkBoxDate.Name = "checkBoxDate";
+            this.checkBoxDate.Size = new System.Drawing.Size(48, 16);
+            this.checkBoxDate.TabIndex = 8;
+            this.checkBoxDate.Text = "기간";
+            this.checkBoxDate.UseVisualStyleBackColor = true;
+            // 
+            // labelPageNumber
+            // 
+            this.labelPageNumber.AutoSize = true;
+            this.labelPageNumber.Location = new System.Drawing.Point(232, 48);
+            this.labelPageNumber.Name = "labelPageNumber";
+            this.labelPageNumber.Size = new System.Drawing.Size(34, 12);
+            this.labelPageNumber.TabIndex = 7;
+            this.labelPageNumber.Text = "Page";
+            this.labelPageNumber.MouseLeave += new System.EventHandler(this.labelPage1_MouseLeave);
+            this.labelPageNumber.MouseHover += new System.EventHandler(this.labelPage1_MouseHover);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.rscTransactionGrid);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(1306, 484);
+            this.groupBox1.TabIndex = 8;
+            this.groupBox1.TabStop = false;
+            // 
             // TransactionStock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(941, 594);
+            this.ClientSize = new System.Drawing.Size(1306, 594);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.rscTransactionGrid);
             this.Name = "TransactionStock";
             this.Text = "원자재 입출고 조회";
             this.Load += new System.EventHandler(this.TransactionStock_Load);
             ((System.ComponentModel.ISupportInitialize)(this.rscTransactionGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsTransaction)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsTransaction)).EndInit();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -294,5 +307,6 @@ namespace MesUI
         private System.Windows.Forms.Label labelPageNumber;
         private System.Windows.Forms.ComboBox comboBoxRscId;
         private System.Windows.Forms.ComboBox comboBoxPageNumber;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
