@@ -19,12 +19,6 @@ namespace MesUI
             load();
         }
 
-        private void Reset_Click(object sender, EventArgs e)
-        {
-            this.Controls.Clear();
-            load();
-            DisplayQuote();
-        }
         public void load()
         {
             InitializeComponent();
@@ -32,7 +26,6 @@ namespace MesUI
             checkBox2.CheckedChanged += checkBox_CheckedChanged;
             checkBox3.CheckedChanged += checkBox_CheckedChanged;
             checkBox4.CheckedChanged += checkBox_CheckedChanged;
-
         }
 
         private void ResourceQuoteForm_Load(object sender, EventArgs e)
@@ -77,10 +70,7 @@ namespace MesUI
 
         private void PeriodSearch_Click(object sender, EventArgs e)
         {
-            DateTime dt1 = this.uiDt_StartTime.Value.Date;
-            DateTime dt2 = this.uiDt_EndTime.Value.Date;
-
-            List<Resource_Quote> list = Dao.Resource_Quote.GetByDate(dt1, dt2);
+            List<Resource_Quote> list = Dao.Resource_Quote.GetByDate(uiDt_StartTime.Value.Date, uiDt_EndTime.Value.Date);
 
             if (uiDt_StartTime.Value > uiDt_EndTime.Value)
             {
@@ -97,6 +87,14 @@ namespace MesUI
             resourceQuoteBindingSource.DataSource = list;
 
         }
+        
+        private void Reset_Click(object sender, EventArgs e)
+        {
+            this.Controls.Clear();
+            load();
+            DisplayQuote();
+        }
+
 
     }
 }
