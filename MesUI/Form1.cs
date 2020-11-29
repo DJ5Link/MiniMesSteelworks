@@ -173,6 +173,8 @@ namespace MesUI
             login2Form.Dock = DockStyle.Fill;
 
             loginForm.Show();
+
+            tabControl1.SelectedIndex = -1; // 어떤 탭도 선택되지 않은 상태를 의미한다
         }
 
         public void ShowForm(string formName)
