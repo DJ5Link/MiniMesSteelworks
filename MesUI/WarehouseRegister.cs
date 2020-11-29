@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MiniSteelworksMES.Data.Dao;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,21 +16,39 @@ namespace MesUI
         public WarehouseRegister()
         {
             InitializeComponent();
+
+            textboxList = new List<Object>();
+
+            textboxList.Add(textBoxWarehouseId);
+            textboxList.Add(textBoxWarehouseAreaSize);
+            textboxList.Add(textBoxEmployeeId);
+            textboxList.Add(textBoxWarehousePhoneNumber);
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
+        string[] gridRow = new string[4];
+        List<Object> textboxList;
 
+        public WarehouseManagement parentForm = null;
+
+        public WarehouseRegister(string[] gridRow)
+        {
+            InitializeComponent();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void WarehouseAddBtn_Click(object sender, EventArgs e)
         {
+            string[] strArray = new string[4];
 
-        }
+            for (int i = 0; i < textboxList.Count(); i++)
+            {
+                    strArray[i] = ((TextBox)textboxList[i]).Text;
+            }
 
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
+            Dao.WaereHouse.InsertWareHouse(strArray);
 
+            ((WarehouseManagement)this.parentForm).DisplayAllItem();
+
+            this.Hide();
         }
     }
 }

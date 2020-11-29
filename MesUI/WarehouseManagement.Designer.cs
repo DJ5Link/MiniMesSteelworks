@@ -29,152 +29,250 @@ namespace MesUI
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.wareHouseIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.areaSizeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.employeeIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phoneNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.wareHouseBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.AddWarehousebtn = new System.Windows.Forms.Button();
+            this.DeleteWarehousebtn = new System.Windows.Forms.Button();
+            this.ModifyWarehousebtn = new System.Windows.Forms.Button();
+            this.SearchBtn = new System.Windows.Forms.Button();
+            this.SearchWarehouse = new System.Windows.Forms.ComboBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.dataGridViewButtonColumn1 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.WarehouseID = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.WarehouseSIZE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Manager = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.WarehouseContactNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.resourceIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sellerNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.resourceBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.AllBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wareHouseBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.resourceBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("굴림", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(15, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(246, 29);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "창고 관리 및 조회";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.WarehouseID,
-            this.WarehouseSIZE,
-            this.Manager,
-            this.WarehouseContactNumber});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 60);
+            this.wareHouseIdDataGridViewTextBoxColumn,
+            this.areaSizeDataGridViewTextBoxColumn,
+            this.employeeIdDataGridViewTextBoxColumn,
+            this.phoneNumberDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.wareHouseBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(462, 330);
+            this.dataGridView1.Size = new System.Drawing.Size(546, 135);
             this.dataGridView1.TabIndex = 1;
+            // 
+            // wareHouseIdDataGridViewTextBoxColumn
+            // 
+            this.wareHouseIdDataGridViewTextBoxColumn.DataPropertyName = "WareHouseId";
+            this.wareHouseIdDataGridViewTextBoxColumn.HeaderText = "WareHouseId";
+            this.wareHouseIdDataGridViewTextBoxColumn.Name = "wareHouseIdDataGridViewTextBoxColumn";
+            this.wareHouseIdDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // areaSizeDataGridViewTextBoxColumn
+            // 
+            this.areaSizeDataGridViewTextBoxColumn.DataPropertyName = "AreaSize";
+            this.areaSizeDataGridViewTextBoxColumn.HeaderText = "AreaSize";
+            this.areaSizeDataGridViewTextBoxColumn.Name = "areaSizeDataGridViewTextBoxColumn";
+            this.areaSizeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // employeeIdDataGridViewTextBoxColumn
+            // 
+            this.employeeIdDataGridViewTextBoxColumn.DataPropertyName = "EmployeeId";
+            this.employeeIdDataGridViewTextBoxColumn.HeaderText = "EmployeeId";
+            this.employeeIdDataGridViewTextBoxColumn.Name = "employeeIdDataGridViewTextBoxColumn";
+            this.employeeIdDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // phoneNumberDataGridViewTextBoxColumn
+            // 
+            this.phoneNumberDataGridViewTextBoxColumn.DataPropertyName = "PhoneNumber";
+            this.phoneNumberDataGridViewTextBoxColumn.HeaderText = "PhoneNumber";
+            this.phoneNumberDataGridViewTextBoxColumn.Name = "phoneNumberDataGridViewTextBoxColumn";
+            this.phoneNumberDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // wareHouseBindingSource
+            // 
+            this.wareHouseBindingSource.DataSource = typeof(MiniSteelworksMES.Data.WareHouse);
+            // 
+            // AddWarehousebtn
+            // 
+            this.AddWarehousebtn.Location = new System.Drawing.Point(404, 421);
+            this.AddWarehousebtn.Name = "AddWarehousebtn";
+            this.AddWarehousebtn.Size = new System.Drawing.Size(75, 23);
+            this.AddWarehousebtn.TabIndex = 3;
+            this.AddWarehousebtn.Text = "추가";
+            this.AddWarehousebtn.UseVisualStyleBackColor = true;
+            this.AddWarehousebtn.Click += new System.EventHandler(this.AddWarehousebtn_Click);
+            // 
+            // DeleteWarehousebtn
+            // 
+            this.DeleteWarehousebtn.Location = new System.Drawing.Point(483, 421);
+            this.DeleteWarehousebtn.Name = "DeleteWarehousebtn";
+            this.DeleteWarehousebtn.Size = new System.Drawing.Size(75, 23);
+            this.DeleteWarehousebtn.TabIndex = 4;
+            this.DeleteWarehousebtn.Text = "삭제";
+            this.DeleteWarehousebtn.UseVisualStyleBackColor = true;
+            this.DeleteWarehousebtn.Click += new System.EventHandler(this.DeleteWarehousebtn_Click);
+            // 
+            // ModifyWarehousebtn
+            // 
+            this.ModifyWarehousebtn.Location = new System.Drawing.Point(323, 421);
+            this.ModifyWarehousebtn.Name = "ModifyWarehousebtn";
+            this.ModifyWarehousebtn.Size = new System.Drawing.Size(75, 23);
+            this.ModifyWarehousebtn.TabIndex = 5;
+            this.ModifyWarehousebtn.Text = "수정";
+            this.ModifyWarehousebtn.UseVisualStyleBackColor = true;
+            this.ModifyWarehousebtn.Click += new System.EventHandler(this.ModifyWarehousebtn_Click);
+            // 
+            // SearchBtn
+            // 
+            this.SearchBtn.Location = new System.Drawing.Point(142, 421);
+            this.SearchBtn.Name = "SearchBtn";
+            this.SearchBtn.Size = new System.Drawing.Size(75, 23);
+            this.SearchBtn.TabIndex = 6;
+            this.SearchBtn.Text = "조회";
+            this.SearchBtn.UseVisualStyleBackColor = true;
+            this.SearchBtn.Click += new System.EventHandler(this.SearchBtn_Click);
+            // 
+            // SearchWarehouse
+            // 
+            this.SearchWarehouse.FormattingEnabled = true;
+            this.SearchWarehouse.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"});
+            this.SearchWarehouse.Location = new System.Drawing.Point(15, 423);
+            this.SearchWarehouse.Name = "SearchWarehouse";
+            this.SearchWarehouse.Size = new System.Drawing.Size(121, 20);
+            this.SearchWarehouse.TabIndex = 7;
             // 
             // dataGridView2
             // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.AutoGenerateColumns = false;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewButtonColumn1,
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2});
-            this.dataGridView2.Location = new System.Drawing.Point(495, 60);
+            this.categoryDataGridViewTextBoxColumn,
+            this.resourceIdDataGridViewTextBoxColumn,
+            this.nameDataGridViewTextBoxColumn,
+            this.quantityDataGridViewTextBoxColumn,
+            this.sellerNameDataGridViewTextBoxColumn});
+            this.dataGridView2.DataSource = this.resourceBindingSource;
+            this.dataGridView2.Location = new System.Drawing.Point(12, 153);
             this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
             this.dataGridView2.RowTemplate.Height = 23;
-            this.dataGridView2.Size = new System.Drawing.Size(293, 330);
+            this.dataGridView2.Size = new System.Drawing.Size(546, 254);
             this.dataGridView2.TabIndex = 2;
+            
             // 
-            // button1
+            // categoryDataGridViewTextBoxColumn
             // 
-            this.button1.Location = new System.Drawing.Point(632, 407);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "등록";
-            this.button1.UseVisualStyleBackColor = true;
+            this.categoryDataGridViewTextBoxColumn.DataPropertyName = "Category";
+            this.categoryDataGridViewTextBoxColumn.HeaderText = "Category";
+            this.categoryDataGridViewTextBoxColumn.Name = "categoryDataGridViewTextBoxColumn";
+            this.categoryDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // button2
+            // resourceIdDataGridViewTextBoxColumn
             // 
-            this.button2.Location = new System.Drawing.Point(713, 407);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "삭제";
-            this.button2.UseVisualStyleBackColor = true;
+            this.resourceIdDataGridViewTextBoxColumn.DataPropertyName = "ResourceId";
+            this.resourceIdDataGridViewTextBoxColumn.HeaderText = "ResourceId";
+            this.resourceIdDataGridViewTextBoxColumn.Name = "resourceIdDataGridViewTextBoxColumn";
+            this.resourceIdDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // dataGridViewButtonColumn1
+            // nameDataGridViewTextBoxColumn
             // 
-            this.dataGridViewButtonColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewButtonColumn1.HeaderText = "창고 ID";
-            this.dataGridViewButtonColumn1.Name = "dataGridViewButtonColumn1";
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn1
+            // quantityDataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "원자재";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 80;
+            this.quantityDataGridViewTextBoxColumn.DataPropertyName = "Quantity";
+            this.quantityDataGridViewTextBoxColumn.HeaderText = "Quantity";
+            this.quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
+            this.quantityDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn2
+            // sellerNameDataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "재고량(t)";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 80;
+            this.sellerNameDataGridViewTextBoxColumn.DataPropertyName = "SellerName";
+            this.sellerNameDataGridViewTextBoxColumn.HeaderText = "SellerName";
+            this.sellerNameDataGridViewTextBoxColumn.Name = "sellerNameDataGridViewTextBoxColumn";
+            this.sellerNameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // WarehouseID
+            // resourceBindingSource
             // 
-            this.WarehouseID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.WarehouseID.HeaderText = "창고 ID";
-            this.WarehouseID.Name = "WarehouseID";
+            this.resourceBindingSource.DataSource = typeof(MiniSteelworksMES.Data.Resource);
             // 
-            // WarehouseSIZE
+            // AllBtn
             // 
-            this.WarehouseSIZE.HeaderText = "창고 면적";
-            this.WarehouseSIZE.Name = "WarehouseSIZE";
-            this.WarehouseSIZE.Width = 80;
-            // 
-            // Manager
-            // 
-            this.Manager.HeaderText = "담당자";
-            this.Manager.Name = "Manager";
-            this.Manager.Width = 70;
-            // 
-            // WarehouseContactNumber
-            // 
-            this.WarehouseContactNumber.HeaderText = "창고 전화번호";
-            this.WarehouseContactNumber.Name = "WarehouseContactNumber";
-            this.WarehouseContactNumber.Width = 120;
+            this.AllBtn.Location = new System.Drawing.Point(242, 421);
+            this.AllBtn.Name = "AllBtn";
+            this.AllBtn.Size = new System.Drawing.Size(75, 23);
+            this.AllBtn.TabIndex = 8;
+            this.AllBtn.Text = "전체";
+            this.AllBtn.UseVisualStyleBackColor = true;
+            this.AllBtn.Click += new System.EventHandler(this.AllBtn_Click);
             // 
             // WarehouseManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(572, 464);
+            this.Controls.Add(this.AllBtn);
+            this.Controls.Add(this.SearchWarehouse);
+            this.Controls.Add(this.SearchBtn);
+            this.Controls.Add(this.ModifyWarehousebtn);
+            this.Controls.Add(this.DeleteWarehousebtn);
+            this.Controls.Add(this.AddWarehousebtn);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.label1);
             this.Name = "WarehouseManagement";
-            this.Text = "WarehouseManagement";
+            this.Text = "창고 관리 및 조회";
+            this.Load += new System.EventHandler(this.WarehouseManagement_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wareHouseBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.resourceBindingSource)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button AddWarehousebtn;
+        private System.Windows.Forms.Button DeleteWarehousebtn;
+        private System.Windows.Forms.Button ModifyWarehousebtn;
+        private System.Windows.Forms.BindingSource wareHouseBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn wareHouseIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn areaSizeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn employeeIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phoneNumberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button SearchBtn;
+        private System.Windows.Forms.ComboBox SearchWarehouse;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.DataGridViewButtonColumn WarehouseID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn WarehouseSIZE;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Manager;
-        private System.Windows.Forms.DataGridViewTextBoxColumn WarehouseContactNumber;
-        private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn categoryDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn resourceIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn quantityDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sellerNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource resourceBindingSource;
+        private System.Windows.Forms.Button AllBtn;
     }
 }
