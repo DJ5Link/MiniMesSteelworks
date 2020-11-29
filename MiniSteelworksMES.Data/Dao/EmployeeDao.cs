@@ -94,5 +94,51 @@ namespace MiniSteelworksMES.Data.Dao
                 return query.ToList();
             }
         }
+
+        public void UpdateEmployee(List<string> list)
+        {
+            int id = Convert.ToInt32(list[0]);
+
+            using (var context = new MesEntities())
+            {
+                var result = context.Employees.SingleOrDefault(x => x.EmployeeId == id);
+
+                if (result != null)
+                {
+                    result.EmployeeId = id;
+                    result.Name = list[1];
+                    result.Position = list[2];
+                    result.BossId = Convert.ToInt32(list[3]);
+                    result.Address = list[4];
+                    result.PhoneNumber = list[5];
+                    result.Team = list[6];
+                    result.Password = list[7];
+                }
+
+                context.SaveChanges();
+            }
+        }
+
+        public void InsertEmployee(List<string> list)
+        {
+            // insert
+            using (var context = new MesEntities())
+            {
+                var orders = context.Set<Employee>();
+                orders.Add(new Employee
+                {
+                    EmployeeId = Convert.ToInt32(list[0]),
+                    Name = list[1],
+                    Position = list[2],
+                    BossId = Convert.ToInt32(list[3]),
+                    Address = list[4],
+                    PhoneNumber = list[5],
+                    Team = list[6],
+                    Password = list[7]
+                });
+
+                context.SaveChanges();
+            }
+        }
     }
 }

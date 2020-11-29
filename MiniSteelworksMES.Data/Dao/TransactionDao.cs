@@ -40,7 +40,7 @@ namespace MiniSteelworksMES.Data
                     nPageCount += 1;
 
                 var query = (from x in context.Transactions
-                            select x).OrderBy( x => x.Date).Skip((showPage-1) * rowsCountPerPage).Take(20);
+                            select x).OrderBy( x => x.Date).Skip((showPage-1) * rowsCountPerPage).Take(rowsCountPerPage);
 
                 return query.ToList();
             }
