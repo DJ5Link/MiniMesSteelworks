@@ -132,6 +132,12 @@
     <Compile Include="WarehouseManagement.Designer.cs">
       <DependentUpon>WarehouseManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="WarehouseModify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WarehouseModify.Designer.cs">
+      <DependentUpon>WarehouseModify.cs</DependentUpon>
+    </Compile>
     <Compile Include="WarehouseRegister.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,14 +189,21 @@
     <EmbeddedResource Include="WarehouseManagement.resx">
       <DependentUpon>WarehouseManagement.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="WarehouseModify.resx">
+      <DependentUpon>WarehouseModify.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="WarehouseRegister.resx">
       <DependentUpon>WarehouseRegister.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\MiniSteelworksMES.Data.Dao.OrderDao.datasource" />
+    <None Include="Properties\DataSources\MiniSteelworksMES.Data.Dao.WareHouseDao.datasource" />
     <None Include="Properties\DataSources\MiniSteelworksMES.Data.Order.datasource" />
+    <None Include="Properties\DataSources\MiniSteelworksMES.Data.Resource1.datasource" />
     <None Include="Properties\DataSources\MiniSteelworksMES.Data.Transaction.datasource" />
+    <None Include="Properties\DataSources\MiniSteelworksMES.Data.WareHouse.datasource" />
     <None Include="Properties\DataSources\ResourceQuoteForm.datasource" />
+    <None Include="Properties\DataSources\RfidReader.Form1.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -215,6 +228,13 @@
       <Project>{78670a3d-434e-408d-a1a8-47be7b6810b7}</Project>
       <Name>MiniSteelworksMES.Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\RfidReader\RfidReader.csproj">
+      <Project>{b60befc1-0ffa-421f-83f6-96d02cc743d6}</Project>
+      <Name>RfidReader</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

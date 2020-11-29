@@ -27,5 +27,24 @@ namespace MiniSteelworksMES.Data.Dao
                 return query.ToList();
             }
         }
+
+        public List<Resource> GetByPK(string Resource)
+        {
+            Resource.Trim();
+
+            if (Resource == "")
+                return null;
+
+            int id = Convert.ToInt32(Resource);
+
+            using (var context = new MesEntities())
+            {
+                var query = from x in context.Resources
+                            where x.Category == id
+                            select x;
+
+                return query.ToList();
+            }
+        }
     }
 }
