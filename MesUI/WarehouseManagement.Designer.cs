@@ -31,10 +31,6 @@ namespace MesUI
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.wareHouseIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.areaSizeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.employeeIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phoneNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.wareHouseBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.AddWarehousebtn = new System.Windows.Forms.Button();
             this.DeleteWarehousebtn = new System.Windows.Forms.Button();
@@ -42,13 +38,17 @@ namespace MesUI
             this.SearchBtn = new System.Windows.Forms.Button();
             this.SearchWarehouse = new System.Windows.Forms.ComboBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.resourceBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.AllBtn = new System.Windows.Forms.Button();
+            this.wareHouseIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.areaSizeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.employeeIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phoneNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.categoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.resourceIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sellerNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.resourceBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.AllBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wareHouseBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -70,37 +70,10 @@ namespace MesUI
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowTemplate.Height = 23;
             this.dataGridView1.Size = new System.Drawing.Size(546, 135);
             this.dataGridView1.TabIndex = 1;
-            // 
-            // wareHouseIdDataGridViewTextBoxColumn
-            // 
-            this.wareHouseIdDataGridViewTextBoxColumn.DataPropertyName = "WareHouseId";
-            this.wareHouseIdDataGridViewTextBoxColumn.HeaderText = "WareHouseId";
-            this.wareHouseIdDataGridViewTextBoxColumn.Name = "wareHouseIdDataGridViewTextBoxColumn";
-            this.wareHouseIdDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // areaSizeDataGridViewTextBoxColumn
-            // 
-            this.areaSizeDataGridViewTextBoxColumn.DataPropertyName = "AreaSize";
-            this.areaSizeDataGridViewTextBoxColumn.HeaderText = "AreaSize";
-            this.areaSizeDataGridViewTextBoxColumn.Name = "areaSizeDataGridViewTextBoxColumn";
-            this.areaSizeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // employeeIdDataGridViewTextBoxColumn
-            // 
-            this.employeeIdDataGridViewTextBoxColumn.DataPropertyName = "EmployeeId";
-            this.employeeIdDataGridViewTextBoxColumn.HeaderText = "EmployeeId";
-            this.employeeIdDataGridViewTextBoxColumn.Name = "employeeIdDataGridViewTextBoxColumn";
-            this.employeeIdDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // phoneNumberDataGridViewTextBoxColumn
-            // 
-            this.phoneNumberDataGridViewTextBoxColumn.DataPropertyName = "PhoneNumber";
-            this.phoneNumberDataGridViewTextBoxColumn.HeaderText = "PhoneNumber";
-            this.phoneNumberDataGridViewTextBoxColumn.Name = "phoneNumberDataGridViewTextBoxColumn";
-            this.phoneNumberDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // wareHouseBindingSource
             // 
@@ -176,45 +149,10 @@ namespace MesUI
             this.dataGridView2.Location = new System.Drawing.Point(12, 153);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.RowHeadersVisible = false;
             this.dataGridView2.RowTemplate.Height = 23;
             this.dataGridView2.Size = new System.Drawing.Size(546, 254);
             this.dataGridView2.TabIndex = 2;
-            
-            // 
-            // categoryDataGridViewTextBoxColumn
-            // 
-            this.categoryDataGridViewTextBoxColumn.DataPropertyName = "Category";
-            this.categoryDataGridViewTextBoxColumn.HeaderText = "Category";
-            this.categoryDataGridViewTextBoxColumn.Name = "categoryDataGridViewTextBoxColumn";
-            this.categoryDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // resourceIdDataGridViewTextBoxColumn
-            // 
-            this.resourceIdDataGridViewTextBoxColumn.DataPropertyName = "ResourceId";
-            this.resourceIdDataGridViewTextBoxColumn.HeaderText = "ResourceId";
-            this.resourceIdDataGridViewTextBoxColumn.Name = "resourceIdDataGridViewTextBoxColumn";
-            this.resourceIdDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // quantityDataGridViewTextBoxColumn
-            // 
-            this.quantityDataGridViewTextBoxColumn.DataPropertyName = "Quantity";
-            this.quantityDataGridViewTextBoxColumn.HeaderText = "Quantity";
-            this.quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
-            this.quantityDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // sellerNameDataGridViewTextBoxColumn
-            // 
-            this.sellerNameDataGridViewTextBoxColumn.DataPropertyName = "SellerName";
-            this.sellerNameDataGridViewTextBoxColumn.HeaderText = "SellerName";
-            this.sellerNameDataGridViewTextBoxColumn.Name = "sellerNameDataGridViewTextBoxColumn";
-            this.sellerNameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // resourceBindingSource
             // 
@@ -229,6 +167,73 @@ namespace MesUI
             this.AllBtn.Text = "전체";
             this.AllBtn.UseVisualStyleBackColor = true;
             this.AllBtn.Click += new System.EventHandler(this.AllBtn_Click);
+            // 
+            // wareHouseIdDataGridViewTextBoxColumn
+            // 
+            this.wareHouseIdDataGridViewTextBoxColumn.DataPropertyName = "WareHouseId";
+            this.wareHouseIdDataGridViewTextBoxColumn.Frozen = true;
+            this.wareHouseIdDataGridViewTextBoxColumn.HeaderText = "창고 ID";
+            this.wareHouseIdDataGridViewTextBoxColumn.Name = "wareHouseIdDataGridViewTextBoxColumn";
+            this.wareHouseIdDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // areaSizeDataGridViewTextBoxColumn
+            // 
+            this.areaSizeDataGridViewTextBoxColumn.DataPropertyName = "AreaSize";
+            this.areaSizeDataGridViewTextBoxColumn.Frozen = true;
+            this.areaSizeDataGridViewTextBoxColumn.HeaderText = "창고 면적";
+            this.areaSizeDataGridViewTextBoxColumn.Name = "areaSizeDataGridViewTextBoxColumn";
+            this.areaSizeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // employeeIdDataGridViewTextBoxColumn
+            // 
+            this.employeeIdDataGridViewTextBoxColumn.DataPropertyName = "EmployeeId";
+            this.employeeIdDataGridViewTextBoxColumn.Frozen = true;
+            this.employeeIdDataGridViewTextBoxColumn.HeaderText = "담당자";
+            this.employeeIdDataGridViewTextBoxColumn.Name = "employeeIdDataGridViewTextBoxColumn";
+            this.employeeIdDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // phoneNumberDataGridViewTextBoxColumn
+            // 
+            this.phoneNumberDataGridViewTextBoxColumn.DataPropertyName = "PhoneNumber";
+            this.phoneNumberDataGridViewTextBoxColumn.HeaderText = "창고 전화번호";
+            this.phoneNumberDataGridViewTextBoxColumn.Name = "phoneNumberDataGridViewTextBoxColumn";
+            this.phoneNumberDataGridViewTextBoxColumn.ReadOnly = true;
+            this.phoneNumberDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // categoryDataGridViewTextBoxColumn
+            // 
+            this.categoryDataGridViewTextBoxColumn.DataPropertyName = "Category";
+            this.categoryDataGridViewTextBoxColumn.HeaderText = "창고 ID";
+            this.categoryDataGridViewTextBoxColumn.Name = "categoryDataGridViewTextBoxColumn";
+            this.categoryDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // resourceIdDataGridViewTextBoxColumn
+            // 
+            this.resourceIdDataGridViewTextBoxColumn.DataPropertyName = "ResourceId";
+            this.resourceIdDataGridViewTextBoxColumn.HeaderText = "원자재 ID";
+            this.resourceIdDataGridViewTextBoxColumn.Name = "resourceIdDataGridViewTextBoxColumn";
+            this.resourceIdDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "원자재";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // quantityDataGridViewTextBoxColumn
+            // 
+            this.quantityDataGridViewTextBoxColumn.DataPropertyName = "Quantity";
+            this.quantityDataGridViewTextBoxColumn.HeaderText = "재고량";
+            this.quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
+            this.quantityDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // sellerNameDataGridViewTextBoxColumn
+            // 
+            this.sellerNameDataGridViewTextBoxColumn.DataPropertyName = "SellerName";
+            this.sellerNameDataGridViewTextBoxColumn.HeaderText = "수입처";
+            this.sellerNameDataGridViewTextBoxColumn.Name = "sellerNameDataGridViewTextBoxColumn";
+            this.sellerNameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // WarehouseManagement
             // 
@@ -260,19 +265,19 @@ namespace MesUI
         private System.Windows.Forms.Button DeleteWarehousebtn;
         private System.Windows.Forms.Button ModifyWarehousebtn;
         private System.Windows.Forms.BindingSource wareHouseBindingSource;
+        private System.Windows.Forms.Button SearchBtn;
+        private System.Windows.Forms.ComboBox SearchWarehouse;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.BindingSource resourceBindingSource;
+        private System.Windows.Forms.Button AllBtn;
         private System.Windows.Forms.DataGridViewTextBoxColumn wareHouseIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn areaSizeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn employeeIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn phoneNumberDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button SearchBtn;
-        private System.Windows.Forms.ComboBox SearchWarehouse;
-        private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridViewTextBoxColumn categoryDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn resourceIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantityDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn sellerNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource resourceBindingSource;
-        private System.Windows.Forms.Button AllBtn;
     }
 }
