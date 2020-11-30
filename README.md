@@ -25,7 +25,7 @@ Microsoft Visual Studio Community 2019 v16.8.2
 - EntityFrameWork 6.2
 - Winform
 
-### RFID tag information reader Client
+### RFID tag information reader Client Project
 Arduino Sketch 1.8.13
 
 
