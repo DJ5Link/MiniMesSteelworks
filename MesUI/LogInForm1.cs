@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Tab;
 
 namespace MesUI
 {
@@ -27,6 +28,20 @@ namespace MesUI
                 MessageBox.Show(Dao.Employee.GetName(usrIdText.Text) + "님 안녕하세요!", "로그인 성공");
                 ((Form1)(this.MdiParent)).loginState = true;
                 ((Form1)(this.MdiParent)).ShowForm("loginForm2");
+
+                //TabControl tab = null;
+                //foreach (Control c in this.Controls)
+                //{
+                //    if (c is TabControl)
+                //    {
+                //        tab = (TabControl)c;
+                //        break;
+                //    }
+                //}
+
+                //TabItem item = new TabItem { Header = i.ToString(), Name = $"tab{i}" };
+                
+
             }
             else
             {
