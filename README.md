@@ -9,12 +9,11 @@
 
 # 개발 환경
 
-## 공통
 
-#### 데이터베이스
-Microsoft MS-SQL Server 2019
 
-## C# MES Client project
+
+
+### C# MES Client project
 Microsoft Visual Studio Community 2019 v16.8.2
 
 #### 언어
@@ -26,14 +25,19 @@ Microsoft Visual Studio Community 2019 v16.8.2
 - EntityFrameWork 6.2
 - Winform
 
-## RFID tag information reader Client
+### RFID tag information reader Client
 Arduino Sketch 1.8.13
+
 
 #### 언어 및 라이브러리
 C++, MFRC522 library(RFID library)
 
 #### 하드웨어
 Arduino Mega 2560, RFID RC522 Module
+
+## 공통
+#### 데이터베이스
+Microsoft MS-SQL Server 2019
 
 ## 화면 목록
 1. 로그인
@@ -144,6 +148,21 @@ DAO classes
 Project form classes
 <img src="./Document/클래스 다이어그램 DAO3.jpg" width="100%">
 
+# RFID 시퀀스 다이어그램
+<img src="./Document/RFID시퀀스다이어그램.jpg" width="100%">
+
+# RFID 액티비티다이어그램
+<img src="./Document/RFID액티비티다이어그램.jpg" width="100%">
+
+# RFID유스케이스다이어그램
+<img src="./Document/RFID유스케이스다이어그램.jpg" width="100%">
+
+# 재고관리시스템_액티비티다이어그램
+<img src="./Document/재고관리시스템_액티비티다이어그램.jpg" width="100%">
+
+# 재고관리시스템_유스케이스다이어그램
+<img src="./Document/재고관리시스템_유스케이스다이어그램.jpg" width="100%">
+
 # DB 스키마
 
 <img src="./Document/DB Table.jpg" width="100%">
@@ -153,5 +172,14 @@ Project form classes
 ## 발생한 이슈
 1. 입출고 화면에서 기간, 리소스 ID 없이 조회하는 경우 쿼리 결과가 많으므로 조회중에 UI가 멈추는 현상이 발생한다.
 
+2. 스키마 변경 후 Employee 정보가 제대로 조회되지 않던 현상
+
+## 원인
+1. 입, 출고 이력을 조회 조건없이 전체 내용을 조회할 때 데이터 건수가 많을 것이므로 결과를 만들어 내는 데이터 베이스에도 부하가 걸리고, MES UI에도 출력할 때 많은 시간이 걸린다.
+
+2. SQL 서버의 스키마는 변경 되었지만 Visual Studio의 Table Diagram에서는 변경 전의 스키마가 저장돼 있어서 발생하였다.
+
 ## 해결 방법
-1. 데이터가 많아서 한번에 출력할 수가 없으므로 전체 결과 건수를 조사하고 특정 개수만큼 나눠서 화면에 출력하는 방법으로 해결하였다.
+1. 조회 결과의 숫자를 데이터를 한번에 가져오지 말고 UI에서 처리할 수 있는 일정량의 데이터를 데이터 베이스에서 가져오고 화면에 출력하는 방법으로 해결하였다.
+
+2. 이전의 데이터 베이스 다이어그램을 삭제하고 Update model from database로 변경된 테이블 스키마를 반영하여 해결하였다
