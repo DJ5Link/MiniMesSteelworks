@@ -1,4 +1,4 @@
-# MiniMesSteelworks
+# 원자재 재고 관리 시스템
 
 
 - 개발 환경
