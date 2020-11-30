@@ -32,7 +32,7 @@ C# 8.0
 
 # DB 스키마
 
-<img src="./Document/DB Table.jpg" width="45%">
+<img src="./Document/DB Table.jpg" width="100%">
 
 ## 이슈: 입출고 화면에서 기간, 리소스 ID 없이 조회하는 경우 쿼리 결과가 많으므로
 조회중에 UI가 멈추는 현상이 발생한다.
