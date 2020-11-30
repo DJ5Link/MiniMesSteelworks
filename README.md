@@ -149,6 +149,7 @@ Arduino Mega 2560, RFID RC522 Module
 <img src="./Document/MDI 화면.jpg" width="100%">
 
 2. 폼에 데이터를 입력할 때 데이터 형식 검사를 수행하여 잘못된 데이터의 입력 오류를 사전에 방지할 수 있다.
+<img src="./Document/타입 검사 화면.jpg" width="100%">
 
 # 개선할 점
 1. 화면의 폼에 데이터를 입력한 후 엔터키 등의 키 입력 이벤트를 처리하지 않아 사용에 불편한 부분이 있다.
