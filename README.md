@@ -154,7 +154,7 @@ Project form classes
 # RFID 액티비티 다이어그램
 <img src="./Document/RFID액티비티다이어그램.jpg" width="100%">
 
-# RFID 유스케이스다이어그램
+# RFID 유스케이 스다이어그램
 <img src="./Document/RFID유스케이스다이어그램.jpg" width="100%">
 
 # 재고관리시스템 액티비티다이어그램
@@ -167,10 +167,10 @@ Project form classes
 
 <img src="./Document/DB Table.jpg" width="100%">
 
-  - 모든 항목이 제 3 정규화까지 완료됐다.
+  - 모든 항목이 제 3 정규화까지 완료되었다.
 
 ## 발생한 이슈
-1. 입출고 화면에서 기간, 리소스 ID 없이 조회하는 경우 쿼리 결과가 많으므로 조회중에 UI가 멈추는 현상이 발생한다.
+1. 입/출고 화면에서 기간, 리소스 ID 입력없이 조회하는 경우 쿼리 결과가 많으므로 조회중에 UI가 멈추는 현상이 발생한다.
 
 2. 스키마 변경 후 Employee 정보가 제대로 조회되지 않는다.
 
