@@ -40,7 +40,8 @@ namespace MesUI
                 //}
 
                 //TabItem item = new TabItem { Header = i.ToString(), Name = $"tab{i}" };
-                
+                ((Form1)(this.MdiParent)).HideLoginForm();
+
 
             }
             else

@@ -150,7 +150,7 @@ namespace RfidReader
             {
                 SqlConnection MESDBConn = new SqlConnection();
                 //DB 연결 변수
-                MESDBConn.ConnectionString = "Server = 192.168.8.142; database = MES01; uid = sa; pwd = 3512";
+                MESDBConn.ConnectionString = "Server = 192.168.8.173; database = MES01; uid = sa; pwd = 3512";
                 //DB 열기
                 MESDBConn.Open();
 
