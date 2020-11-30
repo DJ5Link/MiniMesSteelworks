@@ -9,9 +9,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RfidReader", "RfidReader\Rf
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniSteelworksMES.Data", "MiniSteelworksMES.Data\MiniSteelworksMES.Data.csproj", "{78670A3D-434E-408D-A1A8-47BE7B6810B7}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Document", "Document", "{0EB0C19D-B8C4-4E39-A0E4-6F04EB3E2CD6}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BEA12C01-5128-4651-B86E-4418789CF42E}"
 	ProjectSection(SolutionItems) = preProject
-		..\..\과목\미니프로젝트\DB 스키마.png = ..\..\과목\미니프로젝트\DB 스키마.png
+		Document\DB 스키마.png = Document\DB 스키마.png
 		README.md = README.md
 	EndProjectSection
 EndProject
