@@ -136,6 +136,14 @@ Arduino Mega 2560, RFID RC522 Module
 # 순서도
 <img src="./Document/순서도.jpg" width="100%">
 
+# 클래스 다이어그램
+DAO base classes
+<img src="./Document/클래스 다이어그램 DAO1.jpg" width="100%">
+DAO classes
+<img src="./Document/클래스 다이어그램 DAO2.jpg" width="100%">
+Project form classes
+<img src="./Document/클래스 다이어그램 DAO3.jpg" width="100%">
+
 # DB 스키마
 
 <img src="./Document/DB Table.jpg" width="100%">
@@ -147,6 +155,3 @@ Arduino Mega 2560, RFID RC522 Module
 
 ## 해결 방법
 1. 데이터가 많아서 한번에 출력할 수가 없으므로 전체 결과 건수를 조사하고 특정 개수만큼 나눠서 화면에 출력하는 방법으로 해결하였다.
-
-## 개선할 점
-1. 

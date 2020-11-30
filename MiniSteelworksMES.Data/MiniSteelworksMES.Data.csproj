@@ -116,6 +116,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />
+    <None Include="ClassDiagramDAO.cd" />
     <None Include="Mes.edmx.diagram">
       <DependentUpon>Mes.edmx</DependentUpon>
     </None>
