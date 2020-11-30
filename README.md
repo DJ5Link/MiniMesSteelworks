@@ -8,25 +8,40 @@
 2020년 11월 23일 ~ 11월 29일
 
 개발 환경
-
+#### Microsoft MS-SQL Server 2019
+#### C# Client
 Microsoft Visual Studio Community 2019 v16.8.2
 
-C# 8.0
+## 언어
+- C# 8.0
 
-.net framework 4.8
+## 프레임워크
+
+- .Net FrameWork 4.8
+- EntityFrameWork 6.2
+- Winform
+
+#### RFID tag reader module
+Arduino Mega 2560, RFID-RC522 Module, MFRC522 library
 
 ## 화면 목록
 1. 로그인
+<img src="./Document/1. 원자재 재고 관리 시스템 로그인 전 화면.jpg" width="100%">
 
 2. 직원 관리
+<img src="./Document/6. 원자재 재고 관리 시스템 직원관리 2) 조회버튼.jpg" width="100%">
 
 3. 재고 관리
+<img src="./Document/11. 원자재 재고 관리 시스템 재고관리 1) 초기화면.jpg" width="100%">
 
 4. 발주 관리
+<img src="./Document/15. 원자재 재고 관리 시스템 발주관리 1) 초기화면.jpg" width="100%">
 
 5. 창고 관리
+<img src="./Document/21. 원자재 재고 관리 시스템 창고관리 2) 수정버튼.jpg" width="100%">
 
 6. 원자재 시세
+<img arc="./Document/23. 원자재 재고 관리 시스템 시세 화면.jpg" width="100%">
 
 
 
@@ -47,4 +62,4 @@ C# 8.0
 2. 폼에 데이터를 입력할 때 데이터 형식 검사를 수행하여 잘못된 데이터의 입력오류를 사전에 방지할 수 있다.
 
 # 개선할 점
-1. 화면의 폼에 데이터를 입력한 후 엔터키 등의 키 입력 이벤트를 처리하지 않아 사용에 약간 불편한 부분이 있다.
+1. 화면의 폼에 데이터를 입력한 후 엔터키 등의 키 입력 이벤트를 처리하지 않아 사용에 불편한 부분이 있다.
