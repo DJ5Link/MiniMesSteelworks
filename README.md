@@ -2,17 +2,17 @@
 
 ## 개요
 
-제철소의 원자재의 입고, 출고, 주문을 관리하고, 직원 정보를 관리하는 제조업 회사의 재고 관리 기능의 일부를 C#, .NET Framework 및 Entity Framework를 이용해 구현하였습니다.
+제철소의 광물 원자재의 입고, 출고, 주문 내역을 관리하고, 시스템에 접속하는 로그인 직원 정보를 관리하는 제조업 회사의 재고 관리 기능의 일부를 C#, .NET Framework 및 Entity Framework를 이용해 구현하였습니다.
 
 ## 개발기간
 2020년 11월 23일 ~ 11월 29일
 
-## 개발 환경
+# 개발 환경
 
 #### 데이터베이스
 Microsoft MS-SQL Server 2019
 
-## C# Client
+## C# MES Client
 Microsoft Visual Studio Community 2019 v16.8.2
 
 #### 언어
@@ -25,13 +25,13 @@ Microsoft Visual Studio Community 2019 v16.8.2
 - Winform
 
 ### RFID tag information reader Client
-Arduino Skect 1.8.13
+Arduino Sketch 1.8.13
 
-#### 언어
-C++
+#### 언어 및 라이브러리
+C++, MFRC522 library(RFID library)
 
 #### 하드웨어
-Arduino Mega 2560, RFID RC522 Module, MFRC522 library
+Arduino Mega 2560, RFID RC522 Module
 
 ## 화면 목록
 1. 로그인
