@@ -8,9 +8,11 @@
 2020년 11월 23일 ~ 11월 29일
 
 ## 개발 환경
+
+#### 데이터베이스
 Microsoft MS-SQL Server 2019
 
-### C# Client
+## C# Client
 Microsoft Visual Studio Community 2019 v16.8.2
 
 #### 언어
