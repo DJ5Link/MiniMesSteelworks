@@ -12,6 +12,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Document", "Document", "{0EB0C19D-B8C4-4E39-A0E4-6F04EB3E2CD6}"
 	ProjectSection(SolutionItems) = preProject
 		..\..\과목\미니프로젝트\DB 스키마.png = ..\..\과목\미니프로젝트\DB 스키마.png
+		README.md = README.md
 	EndProjectSection
 EndProject
 Global
