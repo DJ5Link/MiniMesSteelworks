@@ -8,28 +8,28 @@
     </TypeIdentifier>
   </Class>
   <Class Name="MesUI.LogInForm1" Collapsed="true">
-    <Position X="2.25" Y="0.5" Width="1.5" />
+    <Position X="2.25" Y="0.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AEAAAEAEASAAAhAAAACAAABCgAAAABAAAAAAAAAAAAA=</HashCode>
       <FileName>LogInForm1.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MesUI.LogInForm2" Collapsed="true">
-    <Position X="4" Y="0.5" Width="1.5" />
+    <Position X="4.5" Y="0.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAIAQAACAAABAAAACAAAASAAAAAAAAEAAAAEBAAAA=</HashCode>
       <FileName>LogInForm2.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MesUI.MaterialOrderManagement" Collapsed="true">
-    <Position X="5.75" Y="0.5" Width="1.5" />
+    <Position X="7" Y="0.5" Width="2.25" />
     <TypeIdentifier>
       <HashCode>EgABAAAEACgEAAgAAACACEACAEgggAAAAKAIAAgBIAI=</HashCode>
       <FileName>MaterialOrderManagement.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MesUI.MesRegEx" Collapsed="true">
-    <Position X="7.5" Y="0.5" Width="1.5" />
+    <Position X="9.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAgAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>MesRegEx.cs</FileName>
@@ -43,42 +43,42 @@
     </TypeIdentifier>
   </Class>
   <Class Name="MesUI.OrderModify" Collapsed="true">
-    <Position X="2.25" Y="1.5" Width="1.5" />
+    <Position X="2.25" Y="1.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AEAAAAAAACQEEFIRAACAAAASAAAgAAAAAAABAAAAgAA=</HashCode>
       <FileName>OrderModify.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MesUI.ResourceInfo" Collapsed="true">
-    <Position X="4" Y="1.5" Width="1.5" />
+    <Position X="4.5" Y="1.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAQAAAAAAAA=</HashCode>
       <FileName>ResourceInfo.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MesUI.ResourceQuoteForm" Collapsed="true">
-    <Position X="5.75" Y="1.5" Width="1.5" />
+    <Position X="7" Y="1.5" Width="2.25" />
     <TypeIdentifier>
       <HashCode>QAEAAEiAAKAAJBAIAADCAAATBAgAIAEQAEAAAAkBAAA=</HashCode>
       <FileName>ResourceQuoteForm.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MesUI.StaffManagement" Collapsed="true">
-    <Position X="2.25" Y="2.5" Width="1.5" />
+    <Position X="2.25" Y="2.5" Width="2" />
     <TypeIdentifier>
       <HashCode>IJAABAQAFiAgAJIAQASAAFASiIABAAGgABAxCAAgAgA=</HashCode>
       <FileName>StaffManagement.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MesUI.StaffResisterORModify" Collapsed="true">
-    <Position X="4" Y="2.5" Width="1.5" />
+    <Position X="4.5" Y="2.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAgAACAEABAgAACAQAAiAAAAAAACEAAAAAACGAA=</HashCode>
       <FileName>StaffResisterORModify.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MesUI.TransactionModify" Collapsed="true">
-    <Position X="5.75" Y="2.5" Width="1.5" />
+    <Position X="7" Y="2.5" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AEAAAIAAACAAAFoRAACAAAASAAAiEIAAABABAAAAAAA=</HashCode>
       <FileName>TransactionModify.cs</FileName>
@@ -92,21 +92,21 @@
     </TypeIdentifier>
   </Class>
   <Class Name="MesUI.WarehouseManagement" Collapsed="true">
-    <Position X="2.25" Y="3.5" Width="1.5" />
+    <Position X="2.25" Y="3.5" Width="2" />
     <TypeIdentifier>
       <HashCode>EABBIBSEBCIEAAAEAgWAAEACgBgBEAAgAAAAAAgDAAI=</HashCode>
       <FileName>WarehouseManagement.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MesUI.WarehouseModify" Collapsed="true">
-    <Position X="4" Y="3.5" Width="1.5" />
+    <Position X="4.5" Y="3.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAACAAAFIAAACAAABSAAACAAAgAAABEBAAAAA=</HashCode>
       <FileName>WarehouseModify.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MesUI.WarehouseRegister" Collapsed="true">
-    <Position X="5.75" Y="3.5" Width="1.5" />
+    <Position X="7" Y="3.5" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAACAAAFIAAACAAAASAEACAAAgAAABEAAAAAA=</HashCode>
       <FileName>WarehouseRegister.cs</FileName>

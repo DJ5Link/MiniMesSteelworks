@@ -143,8 +143,6 @@ Microsoft MS-SQL Server 2019
 # 클래스 다이어그램
 DAO base classes
 <img src="./Document/클래스 다이어그램 DAO1.jpg" width="100%">
-DAO classes
-<img src="./Document/클래스 다이어그램 DAO2.jpg" width="100%">
 Project form classes
 <img src="./Document/클래스 다이어그램 DAO3.jpg" width="100%">
 
