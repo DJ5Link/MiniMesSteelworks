@@ -153,7 +153,7 @@ Project form classes
 <img src="./Document/RFID시퀀스다이어그램.jpg" width="100%">
 
 # RFID 액티비티 다이어그램
-<img src="./Document/RFID액티비티다이어그램.jpg" width="100%">
+<img src="./Document/RFID액티비티다이어그램.jpg" width="50%">
 
 # RFID 유스케이스 다이어그램
 <img src="./Document/RFID유스케이스다이어그램.jpg" width="100%">
